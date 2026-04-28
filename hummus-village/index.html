@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hummus Village — Where Tradition Meets the Table | Dunwoody, GA</title>
+  <meta name="description" content="Authentic Mediterranean hummus, falafel, and more. Fresh daily in Dunwoody, Georgia. Kosher-style vegetarian and vegan cuisine by Chef Haim Javits.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============== NAVIGATION ============== -->
+  <header>
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container nav__inner">
+        <a href="index.html" class="nav__logo" aria-label="Hummus Village — Home">
+          <img src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
+          <span class="nav__logo-text">Hummus Village</span>
+        </a>
+
+        <ul class="nav__links">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="menu.html">Menu</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li><a class="nav__link" href="catering.html">Catering</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <a class="nav__cta" href="tel:+17709024454">Order by Phone</a>
+
+        <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu__backdrop"></div>
+      <div class="mobile-menu__panel">
+        <a class="mobile-menu__link" href="index.html">Home</a>
+        <a class="mobile-menu__link" href="menu.html">Menu</a>
+        <a class="mobile-menu__link" href="about.html">About</a>
+        <a class="mobile-menu__link" href="catering.html">Catering</a>
+        <a class="mobile-menu__link" href="contact.html">Contact</a>
+        <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============== HERO ============== -->
+    <section class="hero">
+      <!-- Decorative olive branch line illustration -->
+      <svg class="hero__decor" data-parallax viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none" stroke="#6B7C3A" stroke-width="1.2" stroke-linecap="round">
+          <path d="M10 200 Q 90 130, 180 100 T 310 50"/>
+          <path d="M40 184 Q 60 168, 80 175"/>
+          <path d="M70 168 Q 90 148, 110 158"/>
+          <path d="M105 152 Q 125 134, 145 144"/>
+          <path d="M140 134 Q 158 116, 178 124"/>
+          <path d="M175 116 Q 195 98, 213 106"/>
+          <path d="M210 98 Q 230 80, 248 87"/>
+          <path d="M245 80 Q 263 64, 280 70"/>
+          <ellipse cx="55" cy="178" rx="6" ry="3" transform="rotate(-30 55 178)"/>
+          <ellipse cx="92" cy="160" rx="6.5" ry="3" transform="rotate(-32 92 160)"/>
+          <ellipse cx="128" cy="142" rx="7" ry="3.2" transform="rotate(-30 128 142)"/>
+          <ellipse cx="162" cy="124" rx="7" ry="3.2" transform="rotate(-32 162 124)"/>
+          <ellipse cx="196" cy="108" rx="6.5" ry="3" transform="rotate(-30 196 108)"/>
+          <ellipse cx="230" cy="90" rx="6" ry="2.8" transform="rotate(-30 230 90)"/>
+          <circle cx="78" cy="172" r="3" fill="#6B7C3A"/>
+          <circle cx="148" cy="138" r="3" fill="#6B7C3A"/>
+          <circle cx="218" cy="100" r="3" fill="#6B7C3A"/>
+        </g>
+      </svg>
+
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="eyebrow hero__eyebrow">Dunwoody, Georgia · Since 2024</span>
+
+          <h1 class="hero__h1">
+            Where <span class="hero__highlight">Tradition</span><br>
+            Meets the Table
+          </h1>
+
+          <p class="hero__subhead">
+            Authentic hummus and falafel prepared fresh every morning. Mediterranean ingredients. A chef with forty years of love for this food.
+          </p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--primary btn--large" href="menu.html">See Our Menu</a>
+            <a class="btn btn--ghost" href="tel:+17709024454">Order by Phone — <strong>770 902 4454</strong></a>
+          </div>
+
+          <div class="hero__hours">
+            Open Mon — Fri 11am — 4pm  ·  Sun 12pm — 5pm  ·  Closed Saturdays
+          </div>
+        </div>
+
+        <div class="hero__image-wrap">
+          <img src="images/hero-hummus-chickpeas.jpeg"
+               alt="A fresh bowl of creamy hummus topped with warm chickpeas, parsley, and Mediterranean olive oil."
+               width="800" height="1000"
+               loading="eager" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== INTRO STRIP ============== -->
+    <section class="intro-strip reveal">
+      <p class="intro-strip__text">Where tradition meets the table — fresh daily in Dunwoody.</p>
+    </section>
+
+    <!-- ============== THREE PILLARS ============== -->
+    <section class="section section--white pillars">
+      <div class="pillars__dots" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="pillars__head reveal">
+          <span class="eyebrow">Our Promise</span>
+          <h2 class="section-heading">Three things we never compromise.</h2>
+        </div>
+
+        <div class="pillars__grid">
+          <article class="pillar reveal">
+            <div class="pillar__icon" aria-hidden="true">
+              <!-- Olive jar with branches -->
+              <svg viewBox="0 0 56 56">
+                <path d="M20 8 h16 v6 h-16 z"/>
+                <path d="M18 14 h20 l-2 32 a4 4 0 0 1 -4 4 h-8 a4 4 0 0 1 -4 -4 z"/>
+                <path d="M22 22 q 6 -8 12 0"/>
+                <circle cx="26" cy="32" r="2"/>
+                <circle cx="32" cy="38" r="2"/>
+                <circle cx="28" cy="42" r="1.6"/>
+                <path d="M6 14 q 8 -4 14 2 q -4 8 -14 -2 z" fill="none"/>
+                <path d="M50 14 q -8 -4 -14 2 q 4 8 14 -2 z" fill="none"/>
+              </svg>
+            </div>
+            <h3 class="pillar__heading">Authentic</h3>
+            <p class="pillar__body">
+              Every ingredient — from our hummus and tahini to our olive oil — is sourced directly from the Mediterranean. The flavors you taste are the exact flavors served in village restaurants across the region.
+            </p>
+          </article>
+
+          <span class="pillar__divider" aria-hidden="true"></span>
+
+          <article class="pillar reveal">
+            <div class="pillar__icon" aria-hidden="true">
+              <!-- Mortar & pestle -->
+              <svg viewBox="0 0 56 56">
+                <path d="M10 28 q 0 18 18 18 q 18 0 18 -18 z"/>
+                <path d="M10 28 h 36"/>
+                <path d="M30 12 l 8 -4 l 4 8 l -8 22"/>
+                <circle cx="22" cy="36" r="1.4"/>
+                <circle cx="28" cy="40" r="1.4"/>
+                <circle cx="34" cy="36" r="1.4"/>
+                <circle cx="26" cy="34" r="1.2"/>
+                <circle cx="32" cy="42" r="1.2"/>
+              </svg>
+            </div>
+            <h3 class="pillar__heading">Fresh</h3>
+            <p class="pillar__body">
+              Our hummus and falafel are prepared from scratch every single morning. We source most of our produce from local farms. Nothing on your plate was made yesterday.
+            </p>
+          </article>
+
+          <span class="pillar__divider" aria-hidden="true"></span>
+
+          <article class="pillar reveal">
+            <div class="pillar__icon" aria-hidden="true">
+              <!-- Sprouting plant in a bowl -->
+              <svg viewBox="0 0 56 56">
+                <path d="M10 36 q 18 14 36 0 l -3 8 a 4 4 0 0 1 -4 3 h-22 a 4 4 0 0 1 -4 -3 z"/>
+                <path d="M28 36 V 16"/>
+                <path d="M28 22 q -8 -4 -10 -10 q 8 0 10 6"/>
+                <path d="M28 26 q 8 -4 10 -12 q -8 0 -10 8"/>
+                <path d="M28 18 q 0 -6 4 -8"/>
+              </svg>
+            </div>
+            <h3 class="pillar__heading">Healthy</h3>
+            <p class="pillar__body">
+              We use only premium natural ingredients and never add preservatives or substitutes. Whether you are vegan, vegetarian, or simply curious, every dish here is honest food made with care.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== FEATURED DISH ============== -->
+    <section class="section featured">
+      <div class="container">
+        <div class="featured__inner">
+          <div class="featured__text reveal">
+            <span class="eyebrow">Chef Haim's Signature</span>
+            <h2 class="featured__title">The Hummus Village Plate</h2>
+            <p class="featured__desc">
+              Our signature plate — rich hummus made from scratch, crowned with warm chickpeas, fresh parsley, and Mediterranean olive oil. Served with crisp Israeli salad, house pickles, and warm pita bread. This is the dish that started everything.
+            </p>
+            <span class="featured__price">$11</span>
+            <div>
+              <a class="btn btn--primary" href="menu.html">View Full Menu</a>
+            </div>
+          </div>
+
+          <div class="featured__image-wrap reveal">
+            <!-- Mandala decorative motif -->
+            <svg class="featured__mandala" viewBox="0 0 480 480" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="240" cy="240" r="220"/>
+                <circle cx="240" cy="240" r="180"/>
+                <circle cx="240" cy="240" r="140"/>
+                <circle cx="240" cy="240" r="100"/>
+                <g transform="translate(240,240)">
+                  <g id="petal">
+                    <path d="M0 -200 Q 30 -120 0 -60 Q -30 -120 0 -200"/>
+                  </g>
+                  <use href="#petal" transform="rotate(30)"/>
+                  <use href="#petal" transform="rotate(60)"/>
+                  <use href="#petal" transform="rotate(90)"/>
+                  <use href="#petal" transform="rotate(120)"/>
+                  <use href="#petal" transform="rotate(150)"/>
+                  <use href="#petal" transform="rotate(180)"/>
+                  <use href="#petal" transform="rotate(210)"/>
+                  <use href="#petal" transform="rotate(240)"/>
+                  <use href="#petal" transform="rotate(270)"/>
+                  <use href="#petal" transform="rotate(300)"/>
+                  <use href="#petal" transform="rotate(330)"/>
+                </g>
+              </g>
+            </svg>
+            <img src="images/hummus-village-plate.jpeg"
+                 alt="The Hummus Village signature plate with hummus, warm chickpeas, parsley, and house-made falafel."
+                 width="900" height="720"
+                 loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== CHEF QUOTE ============== -->
+    <section class="section section--dark">
+      <div class="container">
+        <div class="quote-block reveal">
+          <span class="quote-block__mark" aria-hidden="true">&ldquo;</span>
+          <p class="quote-block__text">
+            I have been making hummus and falafel for over forty years. When you taste it here, you are tasting everything I know.
+          </p>
+          <p class="quote-block__attribution">— Chef Haim Javits, Hummus Village</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== STATS ============== -->
+    <section class="section stats">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat reveal">
+            <span class="stat__number">
+              <span data-counter="40">0</span><span>+</span>
+            </span>
+            <span class="stat__label">Years of Culinary Experience</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__number"><span data-counter="2">0</span></span>
+            <span class="stat__label">Legendary New York Restaurants</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat__number">
+              <span data-counter="100">0</span><span>%</span>
+            </span>
+            <span class="stat__label">Fresh, Made Daily</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== HOURS + MAP ============== -->
+    <section class="section locator">
+      <div class="container">
+        <div class="locator__grid">
+          <div class="locator__hours reveal">
+            <span class="eyebrow">Find Us</span>
+            <h2 class="section-heading section-heading--underline">Open daily — except Saturdays.</h2>
+
+            <div class="hours-table">
+              <div class="hours-row">
+                <span class="hours-row__day">Monday — Friday</span>
+                <span class="hours-row__time">11:00 am — 4:00 pm</span>
+              </div>
+              <div class="hours-row hours-row--closed">
+                <span class="hours-row__day">Saturday</span>
+                <span class="hours-row__time">Closed</span>
+              </div>
+              <div class="hours-row">
+                <span class="hours-row__day">Sunday</span>
+                <span class="hours-row__time">12:00 pm — 5:00 pm</span>
+              </div>
+            </div>
+            <p class="hours-note">We are closed on major holidays.</p>
+
+            <div class="address-block">
+              <a href="https://www.google.com/maps/search/?api=1&query=4343+Dunwoody+Park,+Dunwoody,+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park, Dunwoody, GA 30338</a>
+              <a href="tel:+17709024454">770-902-4454</a>
+              <a href="tel:+16785802215">678-580-2215</a>
+            </div>
+          </div>
+
+          <div class="locator__map reveal">
+            <iframe class="map-frame"
+              src="https://www.google.com/maps?q=4343+Dunwoody+Park,+Dunwoody,+GA+30338&output=embed"
+              title="Map of Hummus Village at 4343 Dunwoody Park, Dunwoody, GA"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== HOME CTA ============== -->
+    <section class="section home-cta">
+      <div class="container">
+        <div class="home-cta__inner reveal">
+          <h2 class="home-cta__h2">Ready to order?</h2>
+          <p class="home-cta__body">Call us to place your order for pickup. Fresh plates, ready in minutes.</p>
+          <a class="btn btn--primary btn--large" href="tel:+17709024454">Call 770-902-4454</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img class="footer-col__logo" src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
+          <p class="footer-tagline">Where tradition meets the table.</p>
+          <p class="footer-eco">We compost organic waste, recycle our oil and paper products, and take our responsibility to this community seriously.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-h">Pages</h4>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="catering.html">Catering</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-h">Visit Us</h4>
+          <div class="footer-contact">
+            <a href="https://www.google.com/maps/search/?api=1&query=4343+Dunwoody+Park,+Dunwoody,+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
+            <a class="footer-phone" href="tel:+17709024454">770-902-4454</a>
+            <a class="footer-phone" href="tel:+16785802215">678-580-2215</a>
+            <span>Mon — Fri 11am — 4pm  ·  Sun 12pm — 5pm</span>
+            <div class="footer-social" aria-label="Social media">
+              <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hummus Village. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
