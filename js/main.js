@@ -663,29 +663,25 @@
   }
 
   /* ---------- Hero entrance choreography ---------- */
-  function splitTextNode(node) {
+  function splitHeroH1() {
+    const h1 = document.querySelector('.hero__h1');
+    if (!h1) return [];
+    if (h1.dataset.split === 'true') return Array.from(h1.querySelectorAll('.char'));
+    h1.dataset.split = 'true';
+
+    function splitTextNode(node) {
       const text = node.textContent;
       const frag = document.createDocumentFragment();
       const result = [];
-      // Split into words first, so each word stays on one line
-      const words = text.split(/(\s+)/); // keeps spaces as separate items
-      for (const word of words) {
-        if (word.match(/^\s+$/)) {
-          // it's whitespace — keep it as plain text so lines can wrap here
-          frag.appendChild(document.createTextNode(word));
-        } else if (word.length > 0) {
-          // it's a word — wrap it so it never breaks mid-word
-          const wordSpan = document.createElement('span');
-          wordSpan.style.display = 'inline-block';
-          wordSpan.style.whiteSpace = 'nowrap';
-          for (const ch of word) {
-            const span = document.createElement('span');
-            span.className = 'char';
-            span.textContent = ch;
-            wordSpan.appendChild(span);
-            result.push(span);
-          }
-          frag.appendChild(wordSpan);
+      for (const ch of text) {
+        if (ch === ' ') {
+          frag.appendChild(document.createTextNode(' '));
+        } else {
+          const span = document.createElement('span');
+          span.className = 'char';
+          span.textContent = ch;
+          frag.appendChild(span);
+          result.push(span);
         }
       }
       node.parentNode.replaceChild(frag, node);
