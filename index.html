@@ -5,19 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hummus Village — Where Tradition Meets the Table | Dunwoody, GA</title>
   <meta name="description" content="Authentic Mediterranean hummus, falafel, and more. Fresh daily in Dunwoody, Georgia. Kosher-style vegetarian and vegan cuisine by Chef Haim Javits.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Satisfy&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+
+  <!-- Page transition overlay -->
+  <div class="page-overlay" aria-hidden="true"></div>
 
   <!-- ============== NAVIGATION ============== -->
   <header>
     <nav class="nav" aria-label="Main navigation">
       <div class="container nav__inner">
         <a href="index.html" class="nav__logo" aria-label="Hummus Village — Home">
-          <img src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
+          <img src="images/logo.png" alt="Hummus Village" width="120" height="120">
           <span class="nav__logo-text">Hummus Village</span>
         </a>
 
@@ -32,23 +40,38 @@
         <a class="nav__cta" href="tel:+17709024454">Order by Phone</a>
 
         <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <svg viewBox="0 0 28 28" aria-hidden="true">
+            <line x1="4" y1="9"  x2="24" y2="9"></line>
+            <line x1="4" y1="14" x2="24" y2="14"></line>
+            <line x1="4" y1="19" x2="24" y2="19"></line>
+          </svg>
         </button>
       </div>
     </nav>
 
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu__backdrop"></div>
-      <div class="mobile-menu__panel">
+      <img class="mobile-menu__logo" src="images/logo.png" alt="Hummus Village">
+      <nav class="mobile-menu__links" aria-label="Mobile">
         <a class="mobile-menu__link" href="index.html">Home</a>
         <a class="mobile-menu__link" href="menu.html">Menu</a>
         <a class="mobile-menu__link" href="about.html">About</a>
         <a class="mobile-menu__link" href="catering.html">Catering</a>
         <a class="mobile-menu__link" href="contact.html">Contact</a>
-        <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
-      </div>
+      </nav>
+      <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
+      <svg class="mobile-menu__decor" viewBox="0 0 320 220" aria-hidden="true">
+        <g fill="none" stroke="#FAF6EE" stroke-width="1.4" stroke-linecap="round">
+          <path d="M10 200 Q 100 130, 200 100 T 310 50"/>
+          <ellipse cx="60" cy="178" rx="10" ry="4" transform="rotate(-30 60 178)"/>
+          <ellipse cx="110" cy="155" rx="10" ry="4" transform="rotate(-32 110 155)"/>
+          <ellipse cx="160" cy="135" rx="10" ry="4" transform="rotate(-30 160 135)"/>
+          <ellipse cx="210" cy="115" rx="10" ry="4" transform="rotate(-30 210 115)"/>
+          <ellipse cx="260" cy="90" rx="10" ry="4" transform="rotate(-28 260 90)"/>
+          <circle cx="90" cy="170" r="5" fill="#FAF6EE"/>
+          <circle cx="180" cy="125" r="5" fill="#FAF6EE"/>
+          <circle cx="240" cy="100" r="5" fill="#FAF6EE"/>
+        </g>
+      </svg>
     </div>
   </header>
 
@@ -56,45 +79,47 @@
 
     <!-- ============== HERO ============== -->
     <section class="hero">
-      <!-- Decorative olive branch line illustration -->
-      <svg class="hero__decor" data-parallax viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <g fill="none" stroke="#6B7C3A" stroke-width="1.2" stroke-linecap="round">
-          <path d="M10 200 Q 90 130, 180 100 T 310 50"/>
-          <path d="M40 184 Q 60 168, 80 175"/>
-          <path d="M70 168 Q 90 148, 110 158"/>
-          <path d="M105 152 Q 125 134, 145 144"/>
-          <path d="M140 134 Q 158 116, 178 124"/>
-          <path d="M175 116 Q 195 98, 213 106"/>
-          <path d="M210 98 Q 230 80, 248 87"/>
-          <path d="M245 80 Q 263 64, 280 70"/>
-          <ellipse cx="55" cy="178" rx="6" ry="3" transform="rotate(-30 55 178)"/>
-          <ellipse cx="92" cy="160" rx="6.5" ry="3" transform="rotate(-32 92 160)"/>
-          <ellipse cx="128" cy="142" rx="7" ry="3.2" transform="rotate(-30 128 142)"/>
-          <ellipse cx="162" cy="124" rx="7" ry="3.2" transform="rotate(-32 162 124)"/>
-          <ellipse cx="196" cy="108" rx="6.5" ry="3" transform="rotate(-30 196 108)"/>
-          <ellipse cx="230" cy="90" rx="6" ry="2.8" transform="rotate(-30 230 90)"/>
-          <circle cx="78" cy="172" r="3" fill="#6B7C3A"/>
-          <circle cx="148" cy="138" r="3" fill="#6B7C3A"/>
-          <circle cx="218" cy="100" r="3" fill="#6B7C3A"/>
-        </g>
-      </svg>
+      <div class="hero__dotgrid" aria-hidden="true"></div>
+
+      <!-- Hand-drawn olive branch in bottom-left -->
+      <div class="hero__olive-branch" aria-hidden="true">
+        <svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#6B7C3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path data-draw d="M5 180 Q 90 110, 180 85 T 315 30"/>
+            <path data-draw d="M40 165 Q 60 148, 80 156"/>
+            <path data-draw d="M75 148 Q 95 128, 115 138"/>
+            <path data-draw d="M110 130 Q 130 112, 150 122"/>
+            <path data-draw d="M145 112 Q 165 94, 183 102"/>
+            <path data-draw d="M180 94 Q 200 76, 218 84"/>
+            <path data-draw d="M215 76 Q 235 60, 253 67"/>
+            <ellipse data-draw cx="58" cy="158" rx="9" ry="3.6" transform="rotate(-30 58 158)"/>
+            <ellipse data-draw cx="98" cy="138" rx="10" ry="3.8" transform="rotate(-32 98 138)"/>
+            <ellipse data-draw cx="135" cy="120" rx="10" ry="3.8" transform="rotate(-30 135 120)"/>
+            <ellipse data-draw cx="170" cy="100" rx="10" ry="3.8" transform="rotate(-32 170 100)"/>
+            <ellipse data-draw cx="205" cy="84" rx="9" ry="3.6" transform="rotate(-30 205 84)"/>
+            <ellipse data-draw cx="240" cy="68" rx="9" ry="3.6" transform="rotate(-30 240 68)"/>
+            <circle data-draw cx="82" cy="152" r="4" fill="#6B7C3A"/>
+            <circle data-draw cx="156" cy="116" r="4" fill="#6B7C3A"/>
+            <circle data-draw cx="225" cy="78" r="4" fill="#6B7C3A"/>
+          </g>
+        </svg>
+      </div>
 
       <div class="container hero__inner">
         <div class="hero__text">
-          <span class="eyebrow hero__eyebrow">Dunwoody, Georgia · Since 2024</span>
+          <span class="eyebrow hero__eyebrow">Dunwoody, Georgia · Open Since 2024</span>
 
           <h1 class="hero__h1">
-            Where <span class="hero__highlight">Tradition</span><br>
-            Meets the Table
+            Where <span class="hero__highlight">Tradition<svg class="hero__highlight-line" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 Q 50 2, 100 7 T 198 9"/></svg></span> Meets the Table
           </h1>
 
-          <p class="hero__subhead">
-            Authentic hummus and falafel prepared fresh every morning. Mediterranean ingredients. A chef with forty years of love for this food.
+          <p class="hero__sub">
+            Authentic hummus and falafel, made fresh every morning. Mediterranean ingredients. Forty years of craft by Chef Haim Javits.
           </p>
 
           <div class="hero__ctas">
-            <a class="btn btn--primary btn--large" href="menu.html">See Our Menu</a>
-            <a class="btn btn--ghost" href="tel:+17709024454">Order by Phone — <strong>770 902 4454</strong></a>
+            <a class="btn btn--primary btn--large" href="menu.html">Explore the Menu</a>
+            <a class="btn btn--ghost" href="tel:+17709024454">Call to Order — <strong>770 902 4454</strong></a>
           </div>
 
           <div class="hero__hours">
@@ -102,155 +127,302 @@
           </div>
         </div>
 
-        <div class="hero__image-wrap">
-          <img src="images/hero-hummus-chickpeas.jpeg"
-               alt="A fresh bowl of creamy hummus topped with warm chickpeas, parsley, and Mediterranean olive oil."
-               width="800" height="1000"
-               loading="eager" fetchpriority="high">
+        <div class="hero__canvas-wrap">
+          <canvas class="hero__canvas" data-three="hero-bowl" aria-hidden="true"></canvas>
+
+          <!-- Floating doodles -->
+          <div class="hero__doodles" aria-hidden="true">
+            <div class="hero__doodle hero__doodle--1">
+              <svg viewBox="0 0 64 64">
+                <g fill="none" stroke="#E85C3A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="32" cy="32" r="22"/>
+                  <path d="M14 32 Q 32 18, 50 32"/>
+                  <path d="M22 32 a 10 6 0 0 0 20 0"/>
+                  <path d="M32 14 V 22"/>
+                  <path d="M22 22 q 10 4 20 0"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hero__doodle hero__doodle--2">
+              <svg viewBox="0 0 64 64">
+                <g fill="none" stroke="#6B7C3A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="32" cy="36" rx="14" ry="20"/>
+                  <path d="M32 16 Q 36 8, 44 6"/>
+                  <path d="M22 30 Q 32 28, 42 30"/>
+                </g>
+              </svg>
+            </div>
+            <div class="hero__doodle hero__doodle--3">
+              <svg viewBox="0 0 64 64">
+                <g fill="none" stroke="#D4A017" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="32" cy="32" rx="20" ry="14"/>
+                  <path d="M14 30 Q 22 26, 32 28 T 50 30"/>
+                  <circle cx="20" cy="32" r="2"/>
+                  <circle cx="32" cy="34" r="2"/>
+                  <circle cx="44" cy="32" r="2"/>
+                </g>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============== INTRO STRIP ============== -->
-    <section class="intro-strip reveal">
-      <p class="intro-strip__text">Where tradition meets the table — fresh daily in Dunwoody.</p>
+    <!-- ============== MARQUEE STRIP ============== -->
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span class="marquee__item">Hummus Village
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Dunwoody, Georgia
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Where Tradition Meets the Table
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Fresh Daily
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Kosher-Style
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Vegetarian
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Vegan
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Mediterranean
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span class="marquee__item">Hummus Village
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Dunwoody, Georgia
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Where Tradition Meets the Table
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Fresh Daily
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Kosher-Style
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Vegetarian
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Vegan
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+          <span class="marquee__item">Mediterranean
+            <svg viewBox="0 0 16 16"><ellipse cx="8" cy="8" rx="5" ry="3.5" fill="#D4A017" transform="rotate(-25 8 8)"/></svg>
+          </span>
+        </div>
+      </div>
     </section>
 
     <!-- ============== THREE PILLARS ============== -->
-    <section class="section section--white pillars">
-      <div class="pillars__dots" aria-hidden="true"></div>
-
+    <section class="section pillars">
       <div class="container">
-        <div class="pillars__head reveal">
-          <span class="eyebrow">Our Promise</span>
-          <h2 class="section-heading">Three things we never compromise.</h2>
+        <div class="pillars__head" data-reveal>
+          <span class="script">Simply put —</span>
+          <h2>What Makes Hummus Village Different</h2>
         </div>
 
         <div class="pillars__grid">
-          <article class="pillar reveal">
-            <div class="pillar__icon" aria-hidden="true">
-              <!-- Olive jar with branches -->
-              <svg viewBox="0 0 56 56">
-                <path d="M20 8 h16 v6 h-16 z"/>
-                <path d="M18 14 h20 l-2 32 a4 4 0 0 1 -4 4 h-8 a4 4 0 0 1 -4 -4 z"/>
-                <path d="M22 22 q 6 -8 12 0"/>
-                <circle cx="26" cy="32" r="2"/>
-                <circle cx="32" cy="38" r="2"/>
-                <circle cx="28" cy="42" r="1.6"/>
-                <path d="M6 14 q 8 -4 14 2 q -4 8 -14 -2 z" fill="none"/>
-                <path d="M50 14 q -8 -4 -14 2 q 4 8 14 -2 z" fill="none"/>
+          <article class="pillar" data-reveal>
+            <div class="pillar__svg" data-draw-on-scroll>
+              <svg viewBox="0 0 72 72">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 34 Q 14 56, 36 56 Q 58 56, 58 34 Z"/>
+                  <line x1="14" y1="34" x2="58" y2="34"/>
+                  <path d="M40 14 L 50 6 L 56 14 L 46 38"/>
+                  <circle cx="28" cy="46" r="2"/>
+                  <circle cx="36" cy="50" r="2"/>
+                  <circle cx="44" cy="46" r="2"/>
+                  <circle cx="32" cy="42" r="1.6"/>
+                  <circle cx="42" cy="40" r="1.6"/>
+                  <circle cx="22" cy="62" r="1.4"/>
+                  <circle cx="50" cy="64" r="1.4"/>
+                </g>
               </svg>
             </div>
             <h3 class="pillar__heading">Authentic</h3>
-            <p class="pillar__body">
-              Every ingredient — from our hummus and tahini to our olive oil — is sourced directly from the Mediterranean. The flavors you taste are the exact flavors served in village restaurants across the region.
-            </p>
+            <p class="pillar__body">Every ingredient — tahini, olive oil, chickpeas — sourced directly from the Mediterranean. When you taste it here, you are tasting the same food served in village restaurants across Israel and the Levant for generations.</p>
           </article>
 
-          <span class="pillar__divider" aria-hidden="true"></span>
+          <span class="pillar__divider" aria-hidden="true">
+            <svg viewBox="0 0 32 80">
+              <path d="M16 4 V 76"/>
+              <ellipse cx="10" cy="20" rx="6" ry="2.4" transform="rotate(-30 10 20)"/>
+              <ellipse cx="22" cy="36" rx="6" ry="2.4" transform="rotate(30 22 36)"/>
+              <ellipse cx="10" cy="52" rx="6" ry="2.4" transform="rotate(-30 10 52)"/>
+              <ellipse cx="22" cy="68" rx="6" ry="2.4" transform="rotate(30 22 68)"/>
+            </svg>
+          </span>
 
-          <article class="pillar reveal">
-            <div class="pillar__icon" aria-hidden="true">
-              <!-- Mortar & pestle -->
-              <svg viewBox="0 0 56 56">
-                <path d="M10 28 q 0 18 18 18 q 18 0 18 -18 z"/>
-                <path d="M10 28 h 36"/>
-                <path d="M30 12 l 8 -4 l 4 8 l -8 22"/>
-                <circle cx="22" cy="36" r="1.4"/>
-                <circle cx="28" cy="40" r="1.4"/>
-                <circle cx="34" cy="36" r="1.4"/>
-                <circle cx="26" cy="34" r="1.2"/>
-                <circle cx="32" cy="42" r="1.2"/>
+          <article class="pillar" data-reveal>
+            <div class="pillar__svg" data-draw-on-scroll>
+              <svg viewBox="0 0 72 72">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="36" cy="28" r="10"/>
+                  <line x1="36" y1="10" x2="36" y2="14"/>
+                  <line x1="20" y1="14" x2="22" y2="17"/>
+                  <line x1="50" y1="17" x2="52" y2="14"/>
+                  <line x1="14" y1="28" x2="18" y2="28"/>
+                  <line x1="54" y1="28" x2="58" y2="28"/>
+                  <path d="M14 48 Q 14 60, 36 60 Q 58 60, 58 48 Z"/>
+                  <line x1="14" y1="48" x2="58" y2="48"/>
+                  <path d="M22 50 Q 36 46, 50 50"/>
+                </g>
               </svg>
             </div>
             <h3 class="pillar__heading">Fresh</h3>
-            <p class="pillar__body">
-              Our hummus and falafel are prepared from scratch every single morning. We source most of our produce from local farms. Nothing on your plate was made yesterday.
-            </p>
+            <p class="pillar__body">Hummus and falafel prepared from scratch every morning. Most of our produce comes from local farms. We do not use preservatives, substitutes, or shortcuts. Nothing on your plate was made yesterday.</p>
           </article>
 
-          <span class="pillar__divider" aria-hidden="true"></span>
+          <span class="pillar__divider" aria-hidden="true">
+            <svg viewBox="0 0 32 80">
+              <path d="M16 4 V 76"/>
+              <ellipse cx="10" cy="20" rx="6" ry="2.4" transform="rotate(-30 10 20)"/>
+              <ellipse cx="22" cy="36" rx="6" ry="2.4" transform="rotate(30 22 36)"/>
+              <ellipse cx="10" cy="52" rx="6" ry="2.4" transform="rotate(-30 10 52)"/>
+              <ellipse cx="22" cy="68" rx="6" ry="2.4" transform="rotate(30 22 68)"/>
+            </svg>
+          </span>
 
-          <article class="pillar reveal">
-            <div class="pillar__icon" aria-hidden="true">
-              <!-- Sprouting plant in a bowl -->
-              <svg viewBox="0 0 56 56">
-                <path d="M10 36 q 18 14 36 0 l -3 8 a 4 4 0 0 1 -4 3 h-22 a 4 4 0 0 1 -4 -3 z"/>
-                <path d="M28 36 V 16"/>
-                <path d="M28 22 q -8 -4 -10 -10 q 8 0 10 6"/>
-                <path d="M28 26 q 8 -4 10 -12 q -8 0 -10 8"/>
-                <path d="M28 18 q 0 -6 4 -8"/>
+          <article class="pillar" data-reveal>
+            <div class="pillar__svg" data-draw-on-scroll>
+              <svg viewBox="0 0 72 72">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 44 Q 14 60, 36 60 Q 58 60, 58 44 Z"/>
+                  <line x1="14" y1="44" x2="58" y2="44"/>
+                  <path d="M36 44 V 18"/>
+                  <path d="M36 30 Q 26 28, 22 18 Q 32 20, 36 26"/>
+                  <path d="M36 24 Q 46 22, 50 12 Q 40 14, 36 20"/>
+                  <path d="M36 18 Q 32 12, 36 6 Q 40 12, 36 18"/>
+                </g>
               </svg>
             </div>
             <h3 class="pillar__heading">Healthy</h3>
-            <p class="pillar__body">
-              We use only premium natural ingredients and never add preservatives or substitutes. Whether you are vegan, vegetarian, or simply curious, every dish here is honest food made with care.
-            </p>
+            <p class="pillar__body">Kosher-style. Fully vegetarian. Vegan options throughout. Premium natural ingredients. An honest plate of food that is as nourishing as it is satisfying.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ============== FEATURED DISH ============== -->
-    <section class="section featured">
+    <!-- ============== INTERACTIVE MENU PREVIEW ============== -->
+    <section class="section menu-preview">
       <div class="container">
-        <div class="featured__inner">
-          <div class="featured__text reveal">
-            <span class="eyebrow">Chef Haim's Signature</span>
-            <h2 class="featured__title">The Hummus Village Plate</h2>
-            <p class="featured__desc">
-              Our signature plate — rich hummus made from scratch, crowned with warm chickpeas, fresh parsley, and Mediterranean olive oil. Served with crisp Israeli salad, house pickles, and warm pita bread. This is the dish that started everything.
-            </p>
-            <span class="featured__price">$11</span>
-            <div>
-              <a class="btn btn--primary" href="menu.html">View Full Menu</a>
+        <div class="menu-preview__inner">
+          <div class="menu-preview__head">
+            <span class="eyebrow" data-reveal>What's Cooking</span>
+            <h2 class="section-heading section-heading--underline" data-reveal>What's on the Menu</h2>
+            <p class="section-sub" data-reveal>Plates made with intention. Every item has a story.</p>
+
+            <div class="menu-preview__cats" role="tablist" data-reveal>
+              <div class="cat-row is-active" tabindex="0" role="tab" data-bg="#E8DCC8">
+                <span class="cat-row__name">Village Plates</span>
+                <span class="cat-row__desc">Twelve variations of our house hummus, from the signature original to mushroom, shakshouka, and beyond.</span>
+              </div>
+              <div class="cat-row" tabindex="0" role="tab" data-bg="#D6E0C2">
+                <span class="cat-row__name">Village Pita</span>
+                <span class="cat-row__desc">Falafel, sabich, hummus falafel — Mediterranean street food at its finest, tucked into warm pita.</span>
+              </div>
+              <div class="cat-row" tabindex="0" role="tab" data-bg="#F5EDD8">
+                <span class="cat-row__name">Dessert &amp; Drinks</span>
+                <span class="cat-row__desc">Baklava, knafeh, Turkish coffee, herb tea. The perfect ending to a Mediterranean meal.</span>
+              </div>
             </div>
+
+            <a class="btn btn--primary" href="menu.html" data-reveal>View Full Menu</a>
           </div>
 
-          <div class="featured__image-wrap reveal">
-            <!-- Mandala decorative motif -->
-            <svg class="featured__mandala" viewBox="0 0 480 480" aria-hidden="true">
-              <g fill="none" stroke="currentColor" stroke-width="1">
-                <circle cx="240" cy="240" r="220"/>
-                <circle cx="240" cy="240" r="180"/>
-                <circle cx="240" cy="240" r="140"/>
-                <circle cx="240" cy="240" r="100"/>
-                <g transform="translate(240,240)">
-                  <g id="petal">
-                    <path d="M0 -200 Q 30 -120 0 -60 Q -30 -120 0 -200"/>
-                  </g>
-                  <use href="#petal" transform="rotate(30)"/>
-                  <use href="#petal" transform="rotate(60)"/>
-                  <use href="#petal" transform="rotate(90)"/>
-                  <use href="#petal" transform="rotate(120)"/>
-                  <use href="#petal" transform="rotate(150)"/>
-                  <use href="#petal" transform="rotate(180)"/>
-                  <use href="#petal" transform="rotate(210)"/>
-                  <use href="#petal" transform="rotate(240)"/>
-                  <use href="#petal" transform="rotate(270)"/>
-                  <use href="#petal" transform="rotate(300)"/>
-                  <use href="#petal" transform="rotate(330)"/>
+          <div class="menu-preview__panel" data-reveal>
+            <!-- Village Plates illustration -->
+            <div class="menu-preview__illus is-active">
+              <svg viewBox="0 0 320 320" aria-hidden="true">
+                <g fill="none" stroke="#2C1A0E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="160" cy="180" rx="130" ry="32"/>
+                  <ellipse cx="160" cy="170" rx="130" ry="32"/>
+                  <circle cx="160" cy="148" r="78"/>
+                  <circle cx="160" cy="148" r="60"/>
+                  <path d="M120 130 Q 140 110, 160 120 T 200 130"/>
+                  <path d="M125 145 q 8 -10 18 -2 q 6 8 -2 12"/>
+                  <path d="M170 130 q 8 -10 18 -2 q 6 8 -2 12"/>
+                  <ellipse cx="140" cy="155" rx="3" ry="2"/>
+                  <ellipse cx="155" cy="160" rx="3" ry="2"/>
+                  <ellipse cx="170" cy="158" rx="3" ry="2"/>
+                  <ellipse cx="180" cy="148" rx="3" ry="2"/>
+                  <ellipse cx="148" cy="142" rx="3" ry="2"/>
+                  <path d="M152 138 q -3 -5 0 -8"/>
+                  <path d="M168 142 q 4 -6 1 -10"/>
+                  <path d="M132 168 q -3 -4 0 -7"/>
+                  <path d="M220 80 Q 250 70, 280 90"/>
+                  <ellipse cx="240" cy="78" rx="9" ry="3.6" transform="rotate(-12 240 78)"/>
+                  <ellipse cx="265" cy="80" rx="9" ry="3.6" transform="rotate(8 265 80)"/>
+                  <circle cx="252" cy="86" r="3"/>
                 </g>
-              </g>
-            </svg>
-            <img src="images/hummus-village-plate.jpeg"
-                 alt="The Hummus Village signature plate with hummus, warm chickpeas, parsley, and house-made falafel."
-                 width="900" height="720"
-                 loading="lazy">
+              </svg>
+            </div>
+            <!-- Village Pita illustration -->
+            <div class="menu-preview__illus">
+              <svg viewBox="0 0 320 320" aria-hidden="true">
+                <g fill="none" stroke="#2C1A0E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M50 200 Q 50 100, 160 80 Q 270 100, 270 200 Q 270 230, 240 240 L 80 240 Q 50 230, 50 200 Z"/>
+                  <path d="M70 180 Q 100 160, 160 160 Q 220 160, 250 180"/>
+                  <ellipse cx="100" cy="200" rx="14" ry="10"/>
+                  <ellipse cx="160" cy="195" rx="16" ry="10"/>
+                  <ellipse cx="220" cy="200" rx="14" ry="10"/>
+                  <path d="M85 215 q 6 -4 12 0"/>
+                  <path d="M150 210 q 6 -4 12 0"/>
+                  <path d="M215 215 q 6 -4 12 0"/>
+                  <path d="M120 145 q 8 -10 20 -2"/>
+                  <path d="M170 140 q 8 -10 20 -2"/>
+                  <ellipse cx="135" cy="170" rx="3" ry="2"/>
+                  <ellipse cx="180" cy="170" rx="3" ry="2"/>
+                </g>
+              </svg>
+            </div>
+            <!-- Dessert illustration -->
+            <div class="menu-preview__illus">
+              <svg viewBox="0 0 320 320" aria-hidden="true">
+                <g fill="none" stroke="#2C1A0E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="160" cy="240" rx="100" ry="14"/>
+                  <path d="M70 240 L 80 200 L 240 200 L 250 240"/>
+                  <path d="M80 200 L 95 165 L 225 165 L 240 200"/>
+                  <path d="M95 165 L 110 135 L 210 135 L 225 165"/>
+                  <path d="M110 135 L 125 110 L 195 110 L 210 135"/>
+                  <line x1="80" y1="200" x2="240" y2="200"/>
+                  <line x1="95" y1="165" x2="225" y2="165"/>
+                  <line x1="110" y1="135" x2="210" y2="135"/>
+                  <path d="M100 110 q 4 -10 -2 -16"/>
+                  <path d="M150 90 q 4 -12 -2 -20"/>
+                  <path d="M200 110 q 4 -10 -2 -16"/>
+                  <path d="M120 200 q 6 8 0 14"/>
+                  <path d="M170 200 q 6 10 0 16"/>
+                  <path d="M210 200 q 6 8 0 14"/>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============== CHEF QUOTE ============== -->
-    <section class="section section--dark">
+    <section class="section--off-black chef-quote">
+      <span class="chef-quote__watermark" aria-hidden="true">Tradition</span>
       <div class="container">
-        <div class="quote-block reveal">
-          <span class="quote-block__mark" aria-hidden="true">&ldquo;</span>
-          <p class="quote-block__text">
-            I have been making hummus and falafel for over forty years. When you taste it here, you are tasting everything I know.
-          </p>
-          <p class="quote-block__attribution">— Chef Haim Javits, Hummus Village</p>
+        <div class="chef-quote__inner">
+          <span class="chef-quote__mark" aria-hidden="true">&ldquo;</span>
+          <p class="chef-quote__text" data-quote-words>I have been making hummus and falafel for over forty years. When you taste it here, you are tasting everything I know.</p>
+          <p class="chef-quote__attr" data-reveal>Chef Haim Javits, Founder — Hummus Village</p>
         </div>
       </div>
     </section>
@@ -259,35 +431,76 @@
     <section class="section stats">
       <div class="container">
         <div class="stats__grid">
-          <div class="stat reveal">
-            <span class="stat__number">
-              <span data-counter="40">0</span><span>+</span>
-            </span>
-            <span class="stat__label">Years of Culinary Experience</span>
+          <div class="stat" data-reveal>
+            <div class="stat__svg" data-draw-on-scroll>
+              <svg viewBox="0 0 32 32">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M8 18 Q 8 8, 16 8 Q 24 8, 24 18"/>
+                  <path d="M8 18 L 6 26 L 26 26 L 24 18"/>
+                  <line x1="8" y1="18" x2="24" y2="18"/>
+                  <circle cx="12" cy="14" r="1"/>
+                  <circle cx="20" cy="14" r="1"/>
+                </g>
+              </svg>
+            </div>
+            <div class="stat__number"><span data-counter="40">0</span><span>+</span></div>
+            <div class="stat__label">Years of Culinary Experience</div>
           </div>
-          <div class="stat reveal">
-            <span class="stat__number"><span data-counter="2">0</span></span>
-            <span class="stat__label">Legendary New York Restaurants</span>
+
+          <div class="stat" data-reveal>
+            <div class="stat__svg" data-draw-on-scroll>
+              <svg viewBox="0 0 32 32">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 28 L 2 18 L 6 16 L 6 10 L 12 8 L 12 14 L 16 12 L 16 4 L 20 2 L 20 12 L 24 14 L 24 18 L 30 22 L 30 28 Z"/>
+                  <line x1="6" y1="20" x2="6" y2="22"/>
+                  <line x1="12" y1="18" x2="12" y2="20"/>
+                  <line x1="20" y1="16" x2="20" y2="18"/>
+                  <line x1="24" y1="22" x2="24" y2="24"/>
+                </g>
+              </svg>
+            </div>
+            <div class="stat__number"><span data-counter="2">0</span></div>
+            <div class="stat__label">New York Restaurants</div>
           </div>
-          <div class="stat reveal">
-            <span class="stat__number">
-              <span data-counter="100">0</span><span>%</span>
-            </span>
-            <span class="stat__label">Fresh, Made Daily</span>
+
+          <div class="stat" data-reveal>
+            <div class="stat__svg" data-draw-on-scroll>
+              <svg viewBox="0 0 32 32">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="16" cy="16" r="6"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="16" y1="26" x2="16" y2="30"/>
+                  <line x1="2" y1="16" x2="6" y2="16"/>
+                  <line x1="26" y1="16" x2="30" y2="16"/>
+                  <line x1="6" y1="6" x2="9" y2="9"/>
+                  <line x1="23" y1="23" x2="26" y2="26"/>
+                  <line x1="6" y1="26" x2="9" y2="23"/>
+                  <line x1="23" y1="9" x2="26" y2="6"/>
+                </g>
+              </svg>
+            </div>
+            <div class="stat__number"><span data-counter="100">0</span><span>%</span></div>
+            <div class="stat__label">Made Fresh Daily</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============== HOURS + MAP ============== -->
-    <section class="section locator">
+    <!-- ============== LOCATION ============== -->
+    <section class="section location">
       <div class="container">
-        <div class="locator__grid">
-          <div class="locator__hours reveal">
-            <span class="eyebrow">Find Us</span>
-            <h2 class="section-heading section-heading--underline">Open daily — except Saturdays.</h2>
+        <div class="location__grid">
+          <div data-reveal>
+            <div class="location__pin" data-draw-on-scroll>
+              <svg viewBox="0 0 42 42">
+                <path d="M21 4 C 12 4, 6 11, 6 19 C 6 28, 21 38, 21 38 C 21 38, 36 28, 36 19 C 36 11, 30 4, 21 4 Z"/>
+                <circle cx="21" cy="19" r="5"/>
+              </svg>
+            </div>
+            <span class="eyebrow">Stop By</span>
+            <h2 class="section-heading section-heading--underline">Find Us in Dunwoody</h2>
 
-            <div class="hours-table">
+            <div class="hours-table" style="margin-top: 32px;">
               <div class="hours-row">
                 <span class="hours-row__day">Monday — Friday</span>
                 <span class="hours-row__time">11:00 am — 4:00 pm</span>
@@ -301,16 +514,17 @@
                 <span class="hours-row__time">12:00 pm — 5:00 pm</span>
               </div>
             </div>
-            <p class="hours-note">We are closed on major holidays.</p>
+            <p class="hours-note">Closed on major holidays.</p>
 
             <div class="address-block">
-              <a href="https://www.google.com/maps/search/?api=1&query=4343+Dunwoody+Park,+Dunwoody,+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park, Dunwoody, GA 30338</a>
-              <a href="tel:+17709024454">770-902-4454</a>
-              <a href="tel:+16785802215">678-580-2215</a>
+              <a href="https://maps.google.com/?q=4343+Dunwoody+Park+Dunwoody+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park, Dunwoody, GA 30338</a>
+              <a class="phone-link" href="tel:+17709024454">770-902-4454</a>
+              <a class="phone-link" href="tel:+16785802215">678-580-2215</a>
+              <p class="parking-note">Parking available on-site. Dine-in and takeout.</p>
             </div>
           </div>
 
-          <div class="locator__map reveal">
+          <div data-reveal>
             <iframe class="map-frame"
               src="https://www.google.com/maps?q=4343+Dunwoody+Park,+Dunwoody,+GA+30338&output=embed"
               title="Map of Hummus Village at 4343 Dunwoody Park, Dunwoody, GA"
@@ -321,32 +535,35 @@
       </div>
     </section>
 
-    <!-- ============== HOME CTA ============== -->
-    <section class="section home-cta">
-      <div class="container">
-        <div class="home-cta__inner reveal">
-          <h2 class="home-cta__h2">Ready to order?</h2>
-          <p class="home-cta__body">Call us to place your order for pickup. Fresh plates, ready in minutes.</p>
-          <a class="btn btn--primary btn--large" href="tel:+17709024454">Call 770-902-4454</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ============== FOOTER ============== -->
+  <!-- ============== FOOTER (shared template) ============== -->
   <footer class="site-footer">
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1400 24" preserveAspectRatio="none">
+        <path d="M0 12 Q 100 4, 200 12 T 400 12 T 600 12 T 800 12 T 1000 12 T 1200 12 T 1400 12"/>
+      </svg>
+    </div>
+
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img class="footer-col__logo" src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
-          <p class="footer-tagline">Where tradition meets the table.</p>
+          <img class="footer-logo" src="images/logo.png" alt="Hummus Village" width="120" height="120">
+          <p class="footer-tag">Where tradition meets the table.</p>
           <p class="footer-eco">We compost organic waste, recycle our oil and paper products, and take our responsibility to this community seriously.</p>
+          <div class="footer-social" aria-label="Social media">
+            <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg class="ic-fb" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+            </a>
+          </div>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-h">Pages</h4>
-          <nav class="footer-links" aria-label="Footer navigation">
+          <h4>Pages</h4>
+          <nav class="footer-links" aria-label="Footer">
             <a href="index.html">Home</a>
             <a href="menu.html">Menu</a>
             <a href="about.html">About</a>
@@ -356,27 +573,48 @@
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-h">Visit Us</h4>
+          <h4>Hours</h4>
           <div class="footer-contact">
-            <a href="https://www.google.com/maps/search/?api=1&query=4343+Dunwoody+Park,+Dunwoody,+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
+            <span>Mon — Fri  ·  11am — 4pm</span>
+            <span style="color: #E85C3A;">Saturday  ·  Closed</span>
+            <span>Sunday  ·  12pm — 5pm</span>
+            <span style="opacity:0.6; font-style: italic; font-size: 13px; margin-top: 8px;">Closed on major holidays.</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <div class="footer-contact">
+            <a href="https://maps.google.com/?q=4343+Dunwoody+Park+Dunwoody+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
             <a class="footer-phone" href="tel:+17709024454">770-902-4454</a>
             <a class="footer-phone" href="tel:+16785802215">678-580-2215</a>
-            <span>Mon — Fri 11am — 4pm  ·  Sun 12pm — 5pm</span>
-            <div class="footer-social" aria-label="Social media">
-              <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2025 Hummus Village. All rights reserved.</p>
+        <p>&copy; 2025 Hummus Village — Dunwoody, Georgia. Where Tradition Meets the Table.</p>
       </div>
+    </div>
+
+    <div class="footer-doodle" aria-hidden="true">
+      <svg viewBox="0 0 1400 220" preserveAspectRatio="none">
+        <path d="M40 200 Q 200 130, 400 110 T 700 90 T 1000 100 T 1360 80"/>
+        <ellipse cx="200" cy="148" rx="14" ry="5" transform="rotate(-15 200 148)"/>
+        <ellipse cx="320" cy="125" rx="14" ry="5" transform="rotate(-12 320 125)"/>
+        <ellipse cx="450" cy="108" rx="14" ry="5" transform="rotate(-8 450 108)"/>
+        <ellipse cx="580" cy="100" rx="14" ry="5" transform="rotate(-4 580 100)"/>
+        <ellipse cx="720" cy="92" rx="14" ry="5" transform="rotate(0 720 92)"/>
+        <ellipse cx="860" cy="96" rx="14" ry="5" transform="rotate(4 860 96)"/>
+        <ellipse cx="1000" cy="100" rx="14" ry="5" transform="rotate(8 1000 100)"/>
+        <ellipse cx="1140" cy="92" rx="14" ry="5" transform="rotate(10 1140 92)"/>
+        <ellipse cx="1280" cy="84" rx="14" ry="5" transform="rotate(12 1280 84)"/>
+        <circle cx="260" cy="138" r="6"/>
+        <circle cx="520" cy="105" r="6"/>
+        <circle cx="800" cy="95" r="6"/>
+        <circle cx="1080" cy="98" r="6"/>
+        <circle cx="1320" cy="82" r="6"/>
+      </svg>
     </div>
   </footer>
 
