@@ -673,15 +673,22 @@
       const text = node.textContent;
       const frag = document.createDocumentFragment();
       const result = [];
-      for (const ch of text) {
-        if (ch === ' ') {
-          frag.appendChild(document.createTextNode(' '));
-        } else {
-          const span = document.createElement('span');
-          span.className = 'char';
-          span.textContent = ch;
-          frag.appendChild(span);
-          result.push(span);
+      const words = text.split(/(\s+)/);
+      for (const word of words) {
+        if (word.match(/^\s+$/)) {
+          frag.appendChild(document.createTextNode(word));
+        } else if (word.length > 0) {
+          const wordSpan = document.createElement('span');
+          wordSpan.style.display = 'inline-block';
+          wordSpan.style.whiteSpace = 'nowrap';
+          for (const ch of word) {
+            const span = document.createElement('span');
+            span.className = 'char';
+            span.textContent = ch;
+            wordSpan.appendChild(span);
+            result.push(span);
+          }
+          frag.appendChild(wordSpan);
         }
       }
       node.parentNode.replaceChild(frag, node);
