@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — Hummus Village | Chef Haim Javits</title>
-  <meta name="description" content="The story of Chef Haim Javits — 40 years in the kitchen, from Israel to New York to Dunwoody, Georgia.">
+  <title>About — Hummus Village | The Story of Chef Haim Javits</title>
+  <meta name="description" content="From the kitchens of Israel to two New York restaurants and now Dunwoody, Georgia — the forty-year culinary journey of Chef Haim Javits.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Satisfy&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+  <div class="page-overlay" aria-hidden="true"></div>
 
-  <!-- ============== NAVIGATION ============== -->
   <header>
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav is-solid" aria-label="Main navigation">
       <div class="container nav__inner">
         <a href="index.html" class="nav__logo" aria-label="Hummus Village — Home">
-          <img src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
+          <img src="images/logo.png" alt="Hummus Village" width="120" height="120">
           <span class="nav__logo-text">Hummus Village</span>
         </a>
-
         <ul class="nav__links">
           <li><a class="nav__link" href="index.html">Home</a></li>
           <li><a class="nav__link" href="menu.html">Menu</a></li>
@@ -28,150 +32,133 @@
           <li><a class="nav__link" href="catering.html">Catering</a></li>
           <li><a class="nav__link" href="contact.html">Contact</a></li>
         </ul>
-
         <a class="nav__cta" href="tel:+17709024454">Order by Phone</a>
-
         <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span><span></span><span></span>
+          <svg viewBox="0 0 28 28" aria-hidden="true">
+            <line x1="4" y1="9" x2="24" y2="9"></line>
+            <line x1="4" y1="14" x2="24" y2="14"></line>
+            <line x1="4" y1="19" x2="24" y2="19"></line>
+          </svg>
         </button>
       </div>
     </nav>
 
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu__backdrop"></div>
-      <div class="mobile-menu__panel">
+      <img class="mobile-menu__logo" src="images/logo.png" alt="Hummus Village">
+      <nav class="mobile-menu__links" aria-label="Mobile">
         <a class="mobile-menu__link" href="index.html">Home</a>
         <a class="mobile-menu__link" href="menu.html">Menu</a>
         <a class="mobile-menu__link" href="about.html">About</a>
         <a class="mobile-menu__link" href="catering.html">Catering</a>
         <a class="mobile-menu__link" href="contact.html">Contact</a>
-        <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
-      </div>
+      </nav>
+      <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
     </div>
   </header>
 
   <main>
 
-    <!-- ============== ABOUT HERO ============== -->
+    <!-- ============== PAGE HERO ============== -->
     <section class="page-hero page-hero--cream">
       <div class="container">
-        <div class="about-hero__grid">
-          <div class="page-hero__inner">
-            <span class="eyebrow">The Chef. The Story.</span>
+        <div class="page-hero__inner page-hero__inner--split">
+          <div>
+            <span class="eyebrow">The Chef. The Craft. The Story.</span>
             <h1 class="page-hero__h1">Haim Javits</h1>
-            <p class="page-hero__sub">From the kitchens of Israel to the streets of Manhattan — and now to Dunwoody, Georgia.</p>
+            <p class="page-hero__sub">From the kitchens of Israel to the streets of Manhattan — and now to Dunwoody, Georgia. Forty years of one man's love for this food.</p>
           </div>
-
-          <!-- Decorative olive branch SVG as visual stand-in -->
-          <svg class="about-hero__decor" viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <g fill="none" stroke="#6B7C3A" stroke-width="1.2" stroke-linecap="round">
-              <!-- Central stem -->
-              <path d="M180 30 Q 178 180, 180 330"/>
-              <!-- Left branches -->
-              <path d="M180 70 Q 130 80, 80 70"/>
-              <path d="M180 120 Q 120 130, 60 130"/>
-              <path d="M180 170 Q 110 180, 50 200"/>
-              <path d="M180 220 Q 120 232, 70 260"/>
-              <path d="M180 270 Q 130 282, 90 310"/>
-              <!-- Right branches -->
-              <path d="M180 90 Q 230 100, 280 90"/>
-              <path d="M180 140 Q 240 150, 300 150"/>
-              <path d="M180 190 Q 250 200, 310 220"/>
-              <path d="M180 240 Q 240 252, 290 280"/>
-              <path d="M180 290 Q 230 302, 270 330"/>
-              <!-- Olive leaves left -->
-              <ellipse cx="105" cy="73" rx="14" ry="6" transform="rotate(8 105 73)"/>
-              <ellipse cx="95" cy="128" rx="14" ry="6" transform="rotate(-2 95 128)"/>
-              <ellipse cx="80" cy="184" rx="15" ry="6.5" transform="rotate(-6 80 184)"/>
-              <ellipse cx="100" cy="245" rx="15" ry="6.5" transform="rotate(-12 100 245)"/>
-              <ellipse cx="120" cy="296" rx="14" ry="6" transform="rotate(-18 120 296)"/>
-              <!-- Olive leaves right -->
-              <ellipse cx="252" cy="93" rx="14" ry="6" transform="rotate(-8 252 93)"/>
-              <ellipse cx="265" cy="148" rx="14" ry="6" transform="rotate(2 265 148)"/>
-              <ellipse cx="278" cy="206" rx="15" ry="6.5" transform="rotate(8 278 206)"/>
-              <ellipse cx="262" cy="266" rx="15" ry="6.5" transform="rotate(14 262 266)"/>
-              <ellipse cx="240" cy="316" rx="14" ry="6" transform="rotate(20 240 316)"/>
-              <!-- Olives -->
-              <circle cx="78" cy="76" r="6" fill="#6B7C3A"/>
-              <circle cx="65" cy="135" r="6" fill="#6B7C3A"/>
-              <circle cx="55" cy="203" r="6" fill="#6B7C3A"/>
-              <circle cx="78" cy="259" r="6" fill="#6B7C3A"/>
-              <circle cx="100" cy="313" r="6" fill="#6B7C3A"/>
-              <circle cx="280" cy="93" r="6" fill="#6B7C3A"/>
-              <circle cx="297" cy="153" r="6" fill="#6B7C3A"/>
-              <circle cx="307" cy="222" r="6" fill="#6B7C3A"/>
-              <circle cx="287" cy="282" r="6" fill="#6B7C3A"/>
-              <circle cx="265" cy="333" r="6" fill="#6B7C3A"/>
-            </g>
-          </svg>
+          <div class="page-hero__canvas-wrap">
+            <canvas class="page-hero__canvas" data-three="olive-branch" aria-hidden="true"></canvas>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============== STORY BODY ============== -->
+    <!-- ============== STORY ============== -->
     <section class="section story">
       <div class="container">
         <div class="story__inner">
-          <p class="reveal">
-            Haim Javits began his career in the restaurant industry in Israel in 1986. For four years, he cooked, learned, and built a foundation in the ingredients and techniques that have defined Mediterranean cuisine for generations.
-          </p>
+          <p data-reveal>Haim Javits began his career in the restaurant industry in Israel in 1986. For four years, he cooked, learned, and built a foundation in the ingredients and techniques that have defined Mediterranean cuisine for generations.</p>
 
-          <p class="reveal">
-            In 1990, he moved to the United States with his wife Shoshi, whose support has been the quiet constant behind everything he has built. Two years later, he opened two restaurants in Manhattan — Ma Bapita near Madison Square Garden, and a second location in the West Village, Chelsea. New York in the early 1990s was a city of ambition, and Haim brought his hummus and falafel into the heart of it.
-          </p>
+          <p data-reveal>In 1990, he moved to the United States with his wife Shoshi — whose quiet, steady support has been the constant behind everything he has built. Two years after arriving, Haim opened two restaurants in Manhattan: Ma Bapita near Madison Square Garden, and a second location in the West Village, Chelsea. New York in the early nineties was a city of ambition, and Haim brought his hummus and falafel into the heart of it.</p>
 
-          <blockquote class="story__pullquote reveal">
-            Two restaurants in Manhattan. Forty years of craft. One goal: food that tastes exactly the way it should.
+          <blockquote class="story__pullquote" data-reveal>
+            Two restaurants in Manhattan. Forty years of craft. One goal — food that tastes exactly the way it should.
           </blockquote>
 
-          <p class="reveal">
-            Eventually, Haim and his family relocated to Atlanta, where he returned to his deepest passion — the food that had started it all. Hummus. Falafel. The honest, slow, careful cooking that does not need shortcuts because it has never needed them.
-          </p>
+          <!-- TIMELINE -->
+          <div class="timeline" data-draw-on-scroll aria-hidden="true">
+            <svg viewBox="0 0 720 200" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" stroke="#2C1A0E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <!-- main line -->
+                <path d="M40 110 Q 200 80, 360 110 T 680 110"/>
+                <!-- milestone 1: 1986 -->
+                <circle cx="80" cy="110" r="9" fill="#FAF6EE"/>
+                <path d="M68 90 L 80 78 L 92 90 Z"/>
+                <line x1="80" y1="78" x2="80" y2="60"/>
+                <text x="80" y="148" font-family="Playfair Display, serif" font-size="14" font-weight="700" text-anchor="middle" fill="#2C1A0E" stroke="none">1986</text>
+                <text x="80" y="170" font-family="Lora, serif" font-size="11" text-anchor="middle" fill="#6B7C3A" stroke="none">Israel</text>
+                <!-- milestone 2: 1990 -->
+                <circle cx="240" cy="105" r="9" fill="#FAF6EE"/>
+                <path d="M228 75 v 18 M232 75 v 18 M236 75 v 18 M240 75 v 18 M244 75 v 18 M248 75 v 18 M252 75 v 18"/>
+                <line x1="226" y1="93" x2="254" y2="93"/>
+                <text x="240" y="148" font-family="Playfair Display, serif" font-size="14" font-weight="700" text-anchor="middle" fill="#2C1A0E" stroke="none">1990</text>
+                <text x="240" y="170" font-family="Lora, serif" font-size="11" text-anchor="middle" fill="#6B7C3A" stroke="none">New York</text>
+                <!-- milestone 3: 1992 -->
+                <circle cx="440" cy="105" r="9" fill="#FAF6EE"/>
+                <path d="M422 78 q 0 -10 18 -10 q 18 0 18 10 q 0 10 -18 10 q -18 0 -18 -10 z"/>
+                <line x1="424" y1="80" x2="456" y2="80"/>
+                <text x="440" y="148" font-family="Playfair Display, serif" font-size="14" font-weight="700" text-anchor="middle" fill="#2C1A0E" stroke="none">1992</text>
+                <text x="440" y="170" font-family="Lora, serif" font-size="11" text-anchor="middle" fill="#6B7C3A" stroke="none">Ma Bapita</text>
+                <!-- milestone 4: 2024 -->
+                <circle cx="640" cy="110" r="9" fill="#E85C3A"/>
+                <ellipse cx="640" cy="80" rx="22" ry="10"/>
+                <line x1="618" y1="80" x2="662" y2="80"/>
+                <circle cx="630" cy="76" r="2"/>
+                <circle cx="640" cy="78" r="2"/>
+                <circle cx="650" cy="76" r="2"/>
+                <text x="640" y="148" font-family="Playfair Display, serif" font-size="14" font-weight="700" text-anchor="middle" fill="#E85C3A" stroke="none">2024</text>
+                <text x="640" y="170" font-family="Lora, serif" font-size="11" text-anchor="middle" fill="#6B7C3A" stroke="none">Dunwoody</text>
+              </g>
+            </svg>
+          </div>
 
-          <p class="reveal">
-            Today, Haim is returning to the restaurant industry with Hummus Village in Dunwoody. He adds a special touch of passion to every dish — not as a phrase on a menu, but as a practice that has been consistent for over forty years.
-          </p>
+          <p data-reveal>Eventually, Haim and his family relocated to Atlanta, where he returned to his deepest passion — the food that had started it all. Hummus. Falafel. The honest, slow, careful cooking that does not need shortcuts because it has never needed them.</p>
 
-          <blockquote class="story__pullquote reveal">
+          <blockquote class="story__pullquote" data-reveal>
             Hummus Village is not a concept. It is a continuation of everything Haim has learned.
           </blockquote>
 
-          <p class="reveal">
-            Hummus Village has quickly become a neighborhood favorite. With our new location, we are delighted to offer authentic, high-quality hummus and falafel prepared fresh daily — complemented by crisp salads, Mediterranean spices, original olive oil, and warm pita bread. We remain committed to quality ingredients, excellent service, and outstanding food.
-          </p>
+          <p data-reveal>Today, Haim is returning to the restaurant industry with Hummus Village in Dunwoody. He adds a special touch of passion to every dish — not as a phrase, but as a practice consistent for over forty years.</p>
         </div>
       </div>
     </section>
 
-    <!-- ============== VALUES STRIP ============== -->
-    <section class="section values-strip">
+    <!-- ============== VALUES ============== -->
+    <section class="section values">
       <div class="container">
-        <div style="text-align: center; margin-bottom: var(--space-9);" class="reveal">
-          <span class="eyebrow" style="color: var(--color-gold); justify-content: center;">What we stand for</span>
-          <h2 class="section-heading">A few quiet commitments.</h2>
+        <div style="text-align: center; margin-bottom: var(--s-9);">
+          <span class="eyebrow eyebrow--gold eyebrow--centered" data-reveal>What We Stand For</span>
+          <h2 class="section-heading" data-reveal style="color: var(--c-cream);">Three Things, Always</h2>
         </div>
 
-        <div class="values-strip__grid">
-          <article class="value reveal">
-            <span class="value__num">01 — Tradition</span>
+        <div class="values__grid">
+          <article class="value" data-reveal>
+            <span class="value__num" aria-hidden="true">01</span>
             <h3 class="value__h3">Kosher-Style</h3>
-            <p class="value__body">Vegetarian and vegan cuisine prepared with integrity and care. Authentic Mediterranean technique, applied to every plate that leaves our kitchen.</p>
+            <p class="value__body">Vegetarian and vegan cuisine prepared with integrity and attention. Authentic to the Mediterranean, accessible to everyone.</p>
           </article>
 
-          <span class="value__divider" aria-hidden="true"></span>
-
-          <article class="value reveal">
-            <span class="value__num">02 — Responsibility</span>
-            <h3 class="value__h3">Environmentally Mindful</h3>
-            <p class="value__body">We compost organic waste and recycle our oil and paper products — because we believe businesses have a responsibility to the place they call home.</p>
+          <article class="value" data-reveal>
+            <span class="value__num" aria-hidden="true">02</span>
+            <h3 class="value__h3">Environmentally Responsible</h3>
+            <p class="value__body">We compost organic waste and recycle oil and paper products. Businesses have a responsibility to the places they call home.</p>
           </article>
 
-          <span class="value__divider" aria-hidden="true"></span>
-
-          <article class="value reveal">
-            <span class="value__num">03 — Belonging</span>
+          <article class="value" data-reveal>
+            <span class="value__num" aria-hidden="true">03</span>
             <h3 class="value__h3">Community</h3>
-            <p class="value__body">Hummus Village has quickly become a neighborhood favorite. We are proud to serve the Dunwoody community, and grateful every time you walk in.</p>
+            <p class="value__body">Hummus Village has quickly become a neighborhood home. We are proud to serve Dunwoody and all who find their way to our table.</p>
           </article>
         </div>
       </div>
@@ -180,46 +167,28 @@
     <!-- ============== CHEF BANNER ============== -->
     <section class="chef-banner">
       <div class="container">
-        <div class="chef-banner__inner reveal">
-          <svg class="chef-banner__svg" viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
-              <path d="M30 100 Q 110 70, 180 80 T 330 100"/>
-              <path d="M50 92 Q 70 78, 90 84"/>
-              <path d="M85 80 Q 105 64, 125 72"/>
-              <path d="M120 72 Q 140 58, 160 64"/>
-              <path d="M155 64 Q 180 52, 200 58"/>
-              <path d="M195 58 Q 220 50, 240 56"/>
-              <path d="M235 60 Q 260 56, 280 64"/>
-              <path d="M275 70 Q 295 70, 310 80"/>
-              <ellipse cx="68" cy="86" rx="9" ry="3.5" transform="rotate(-18 68 86)"/>
-              <ellipse cx="105" cy="74" rx="10" ry="3.8" transform="rotate(-22 105 74)"/>
-              <ellipse cx="142" cy="65" rx="10" ry="4" transform="rotate(-20 142 65)"/>
-              <ellipse cx="180" cy="58" rx="10" ry="4" transform="rotate(-10 180 58)"/>
-              <ellipse cx="218" cy="56" rx="10" ry="4" transform="rotate(0 218 56)"/>
-              <ellipse cx="258" cy="60" rx="10" ry="4" transform="rotate(8 258 60)"/>
-              <ellipse cx="294" cy="72" rx="10" ry="4" transform="rotate(15 294 72)"/>
-              <circle cx="92" cy="80" r="4.5" fill="currentColor"/>
-              <circle cx="160" cy="62" r="4.5" fill="currentColor"/>
-              <circle cx="200" cy="58" r="4.5" fill="currentColor"/>
-              <circle cx="270" cy="64" r="4.5" fill="currentColor"/>
-            </g>
-          </svg>
-          <p class="chef-banner__quote">Forty years of love for this food.</p>
-          <p class="chef-banner__attribution">— Chef Haim Javits, Founder of Hummus Village</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============== CTA ============== -->
-    <section class="section section--white" style="padding-block: var(--space-9); text-align: center;">
-      <div class="container">
-        <div class="reveal">
-          <h2 class="section-heading" style="margin-bottom: var(--space-5);">Come taste forty years of practice.</h2>
-          <p class="section-sub" style="margin-inline: auto; margin-bottom: var(--space-7);">Visit us at 4343 Dunwoody Park or call ahead for pickup. Either way, your plate will be made fresh.</p>
-          <div style="display: flex; gap: var(--space-5); justify-content: center; flex-wrap: wrap;">
-            <a class="btn btn--primary btn--large" href="menu.html">See the Menu</a>
-            <a class="btn btn--ghost" href="tel:+17709024454">Call <strong>770-902-4454</strong></a>
+        <div class="chef-banner__inner">
+          <div class="chef-banner__svg" data-draw-on-scroll>
+            <svg viewBox="0 0 500 140">
+              <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 120 Q 130 60, 250 50 T 480 30"/>
+                <ellipse cx="80" cy="106" rx="14" ry="5" transform="rotate(-22 80 106)"/>
+                <ellipse cx="130" cy="92" rx="14" ry="5" transform="rotate(-18 130 92)"/>
+                <ellipse cx="180" cy="78" rx="14" ry="5" transform="rotate(-15 180 78)"/>
+                <ellipse cx="230" cy="64" rx="14" ry="5" transform="rotate(-10 230 64)"/>
+                <ellipse cx="290" cy="56" rx="14" ry="5" transform="rotate(-5 290 56)"/>
+                <ellipse cx="350" cy="48" rx="14" ry="5" transform="rotate(0 350 48)"/>
+                <ellipse cx="410" cy="40" rx="14" ry="5" transform="rotate(5 410 40)"/>
+                <ellipse cx="460" cy="32" rx="14" ry="5" transform="rotate(8 460 32)"/>
+                <circle cx="105" cy="100" r="5" fill="#D4A017"/>
+                <circle cx="200" cy="74" r="5" fill="#D4A017"/>
+                <circle cx="320" cy="54" r="5" fill="#D4A017"/>
+                <circle cx="430" cy="38" r="5" fill="#D4A017"/>
+              </g>
+            </svg>
           </div>
+          <p class="chef-banner__quote" data-reveal>Forty years of love for this food.</p>
+          <p class="chef-banner__attr" data-reveal>Chef Haim Javits, Founder</p>
         </div>
       </div>
     </section>
@@ -228,47 +197,72 @@
 
   <!-- ============== FOOTER ============== -->
   <footer class="site-footer">
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1400 24" preserveAspectRatio="none">
+        <path d="M0 12 Q 100 4, 200 12 T 400 12 T 600 12 T 800 12 T 1000 12 T 1200 12 T 1400 12"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img class="footer-col__logo" src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
-          <p class="footer-tagline">Where tradition meets the table.</p>
+          <img class="footer-logo" src="images/logo.png" alt="Hummus Village" width="120" height="120">
+          <p class="footer-tag">Where tradition meets the table.</p>
           <p class="footer-eco">We compost organic waste, recycle our oil and paper products, and take our responsibility to this community seriously.</p>
+          <div class="footer-social" aria-label="Social media">
+            <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg class="ic-fb" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+            </a>
+          </div>
         </div>
-
         <div class="footer-col">
-          <h4 class="footer-h">Pages</h4>
-          <nav class="footer-links" aria-label="Footer navigation">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About</a>
-            <a href="catering.html">Catering</a>
-            <a href="contact.html">Contact</a>
+          <h4>Pages</h4>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="catering.html">Catering</a><a href="contact.html">Contact</a>
           </nav>
         </div>
-
         <div class="footer-col">
-          <h4 class="footer-h">Visit Us</h4>
+          <h4>Hours</h4>
           <div class="footer-contact">
-            <a href="https://www.google.com/maps/search/?api=1&query=4343+Dunwoody+Park,+Dunwoody,+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
+            <span>Mon — Fri  ·  11am — 4pm</span>
+            <span style="color: #E85C3A;">Saturday  ·  Closed</span>
+            <span>Sunday  ·  12pm — 5pm</span>
+            <span style="opacity:0.6; font-style: italic; font-size: 13px; margin-top: 8px;">Closed on major holidays.</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <div class="footer-contact">
+            <a href="https://maps.google.com/?q=4343+Dunwoody+Park+Dunwoody+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
             <a class="footer-phone" href="tel:+17709024454">770-902-4454</a>
             <a class="footer-phone" href="tel:+16785802215">678-580-2215</a>
-            <span>Mon — Fri 11am — 4pm  ·  Sun 12pm — 5pm</span>
-            <div class="footer-social" aria-label="Social media">
-              <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2025 Hummus Village. All rights reserved.</p>
+        <p>&copy; 2025 Hummus Village — Dunwoody, Georgia. Where Tradition Meets the Table.</p>
       </div>
+    </div>
+    <div class="footer-doodle" aria-hidden="true">
+      <svg viewBox="0 0 1400 220" preserveAspectRatio="none">
+        <path d="M40 200 Q 200 130, 400 110 T 700 90 T 1000 100 T 1360 80"/>
+        <ellipse cx="200" cy="148" rx="14" ry="5" transform="rotate(-15 200 148)"/>
+        <ellipse cx="320" cy="125" rx="14" ry="5" transform="rotate(-12 320 125)"/>
+        <ellipse cx="450" cy="108" rx="14" ry="5" transform="rotate(-8 450 108)"/>
+        <ellipse cx="580" cy="100" rx="14" ry="5" transform="rotate(-4 580 100)"/>
+        <ellipse cx="720" cy="92" rx="14" ry="5" transform="rotate(0 720 92)"/>
+        <ellipse cx="860" cy="96" rx="14" ry="5" transform="rotate(4 860 96)"/>
+        <ellipse cx="1000" cy="100" rx="14" ry="5" transform="rotate(8 1000 100)"/>
+        <ellipse cx="1140" cy="92" rx="14" ry="5" transform="rotate(10 1140 92)"/>
+        <ellipse cx="1280" cy="84" rx="14" ry="5" transform="rotate(12 1280 84)"/>
+        <circle cx="260" cy="138" r="6"/>
+        <circle cx="520" cy="105" r="6"/>
+        <circle cx="800" cy="95" r="6"/>
+        <circle cx="1080" cy="98" r="6"/>
+        <circle cx="1320" cy="82" r="6"/>
+      </svg>
     </div>
   </footer>
 
