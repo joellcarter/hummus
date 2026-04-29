@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catering — Hummus Village | Dunwoody, GA</title>
-  <meta name="description" content="Catering for groups of 12 or more. Fresh Mediterranean food prepared by Chef Haim Javits. Call to place your order.">
+  <title>Catering — Hummus Village | Fresh Mediterranean for Every Occasion</title>
+  <meta name="description" content="Hummus Village caters fresh Mediterranean food for groups of 12 or more. Pricing starts at $15 per person. Dunwoody, Georgia.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Satisfy&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+  <div class="page-overlay" aria-hidden="true"></div>
 
-  <!-- ============== NAVIGATION ============== -->
   <header>
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav is-solid" aria-label="Main navigation">
       <div class="container nav__inner">
         <a href="index.html" class="nav__logo" aria-label="Hummus Village — Home">
-          <img src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
+          <img src="images/logo.png" alt="Hummus Village" width="120" height="120">
           <span class="nav__logo-text">Hummus Village</span>
         </a>
-
         <ul class="nav__links">
           <li><a class="nav__link" href="index.html">Home</a></li>
           <li><a class="nav__link" href="menu.html">Menu</a></li>
@@ -28,193 +32,182 @@
           <li><a class="nav__link" href="catering.html">Catering</a></li>
           <li><a class="nav__link" href="contact.html">Contact</a></li>
         </ul>
-
         <a class="nav__cta" href="tel:+17709024454">Order by Phone</a>
-
         <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span><span></span><span></span>
+          <svg viewBox="0 0 28 28" aria-hidden="true">
+            <line x1="4" y1="9" x2="24" y2="9"></line>
+            <line x1="4" y1="14" x2="24" y2="14"></line>
+            <line x1="4" y1="19" x2="24" y2="19"></line>
+          </svg>
         </button>
       </div>
     </nav>
 
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu__backdrop"></div>
-      <div class="mobile-menu__panel">
+      <img class="mobile-menu__logo" src="images/logo.png" alt="Hummus Village">
+      <nav class="mobile-menu__links" aria-label="Mobile">
         <a class="mobile-menu__link" href="index.html">Home</a>
         <a class="mobile-menu__link" href="menu.html">Menu</a>
         <a class="mobile-menu__link" href="about.html">About</a>
         <a class="mobile-menu__link" href="catering.html">Catering</a>
         <a class="mobile-menu__link" href="contact.html">Contact</a>
-        <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
-      </div>
+      </nav>
+      <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
     </div>
   </header>
 
   <main>
 
-    <!-- ============== CATERING HERO ============== -->
+    <!-- ============== PAGE HERO ============== -->
     <section class="page-hero page-hero--dark">
       <div class="container">
-        <div class="catering-hero__inner">
-          <div class="page-hero__inner">
-            <span class="eyebrow" style="color: var(--color-gold);">Catering &amp; Group Orders</span>
-            <h1 class="page-hero__h1">Catering for every occasion.</h1>
-            <p class="page-hero__sub">Authentic Mediterranean food for your team, your event, or your celebration. Prepared fresh by Chef Haim — for groups of twelve or more.</p>
+        <div class="page-hero__inner page-hero__inner--split">
+          <div>
+            <span class="eyebrow eyebrow--gold">Groups of 12 or More</span>
+            <h1 class="page-hero__h1">Catering for Every Occasion</h1>
+            <p class="page-hero__sub">Fresh Mediterranean food for your team, your event, or your celebration. Prepared by Chef Haim.</p>
           </div>
-
-          <!-- Decorative platter SVG -->
-          <svg class="catering-hero__decor" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Large platter -->
-              <ellipse cx="160" cy="180" rx="140" ry="32"/>
-              <ellipse cx="160" cy="170" rx="140" ry="32"/>
-              <!-- Bowls on platter -->
-              <circle cx="80" cy="160" r="32"/>
-              <circle cx="160" cy="150" r="36"/>
-              <circle cx="240" cy="160" r="32"/>
-              <!-- Garnish swirls -->
-              <path d="M65 155 q 8 -8 18 -2 q 4 6 -2 10"/>
-              <path d="M148 145 q 10 -10 22 -2 q 6 8 -4 12"/>
-              <path d="M225 155 q 8 -8 18 -2 q 4 6 -2 10"/>
-              <!-- Tiny olives -->
-              <ellipse cx="60" cy="150" rx="3" ry="2"/>
-              <ellipse cx="155" cy="138" rx="3" ry="2"/>
-              <ellipse cx="235" cy="150" rx="3" ry="2"/>
-              <!-- Steam lines -->
-              <path d="M75 110 q 4 -10 -2 -20 q 4 -8 -2 -14"/>
-              <path d="M155 100 q 4 -10 -2 -20 q 4 -8 -2 -14"/>
-              <path d="M235 110 q 4 -10 -2 -20 q 4 -8 -2 -14"/>
-              <!-- Olive branch decoration -->
-              <path d="M20 80 Q 80 60, 140 70"/>
-              <ellipse cx="50" cy="72" rx="8" ry="3" transform="rotate(-12 50 72)"/>
-              <ellipse cx="90" cy="64" rx="8" ry="3" transform="rotate(-8 90 64)"/>
-              <circle cx="70" cy="70" r="2.5" fill="currentColor"/>
-              <circle cx="115" cy="65" r="2.5" fill="currentColor"/>
-            </g>
-          </svg>
+          <div class="page-hero__canvas-wrap">
+            <canvas class="page-hero__canvas" data-three="plate-stack" aria-hidden="true"></canvas>
+          </div>
         </div>
+      </div>
+
+      <div class="page-hero__decor-bottom" aria-hidden="true">
+        <svg viewBox="0 0 1400 80" preserveAspectRatio="none">
+          <path d="M40 60 Q 200 20, 400 30 T 700 25 T 1000 30 T 1360 18"/>
+          <ellipse cx="200" cy="44" rx="14" ry="5" transform="rotate(-15 200 44)"/>
+          <ellipse cx="500" cy="28" rx="14" ry="5" transform="rotate(-8 500 28)"/>
+          <ellipse cx="800" cy="26" rx="14" ry="5" transform="rotate(2 800 26)"/>
+          <ellipse cx="1100" cy="26" rx="14" ry="5" transform="rotate(10 1100 26)"/>
+        </svg>
       </div>
     </section>
 
-    <!-- ============== TIER OVERVIEW ============== -->
+    <!-- ============== PRICING TIERS ============== -->
     <section class="section section--cream">
       <div class="container">
-        <div style="text-align: center; max-width: 640px; margin: 0 auto var(--space-9);" class="reveal">
-          <span class="eyebrow" style="justify-content: center;">Two simple options</span>
-          <h2 class="section-heading">Pick your menu. Pick your group size. We do the rest.</h2>
+        <div class="section-head--center">
+          <span class="eyebrow eyebrow--centered" data-reveal>Two Simple Options</span>
+          <h2 class="section-heading section-heading--underline" data-reveal>Catering Pricing</h2>
+          <p class="section-sub" data-reveal>Choose the package that fits your event. Both options come from our full catering menu.</p>
         </div>
 
         <div class="tier-grid">
-          <article class="tier reveal">
-            <span class="tier__count">Five</span>
+          <article class="tier" data-reveal>
+            <span class="tier__count">Five Items</span>
             <h3 class="tier__heading">5 Menu Options</h3>
-            <span class="tier__price">$15<span class="tier__price-suffix">per person</span></span>
-            <p class="tier__detail">Choose any five items from the catering menu below. Minimum group size of twelve people required.</p>
+            <div class="tier__price">$15<span class="tier__price-unit">/ person</span></div>
+            <p class="tier__detail">Choose any five items from the catering menu. Requires a minimum of 12 guests. Perfect for casual gatherings, team lunches, and small celebrations.</p>
           </article>
 
-          <article class="tier reveal">
-            <span class="tier__count">Eight</span>
+          <article class="tier" data-reveal>
+            <span class="tier__count">Eight Items</span>
             <h3 class="tier__heading">8 Menu Options</h3>
-            <span class="tier__price">$18<span class="tier__price-suffix">per person</span></span>
-            <p class="tier__detail">Choose any eight items from the catering menu below. Minimum group size of twelve people required.</p>
+            <div class="tier__price">$18<span class="tier__price-unit">/ person</span></div>
+            <p class="tier__detail">Choose any eight items from the catering menu. Requires a minimum of 12 guests. The fuller spread — ideal for bigger events and more variety on the table.</p>
           </article>
         </div>
 
-        <p class="notice reveal">Orders require prepayment. Cancellations are non-refundable.</p>
+        <p class="policy-notice" data-reveal>All catering orders require prepayment. Cancellations are non-refundable.</p>
       </div>
     </section>
 
-    <!-- ============== CATERING MENU ============== -->
+    <!-- ============== CATERING MENU LIST ============== -->
     <section class="section section--white">
       <div class="container">
-        <div style="text-align: center; max-width: 600px; margin: 0 auto var(--space-9);" class="reveal">
-          <span class="eyebrow" style="justify-content: center;">The Menu</span>
-          <h2 class="section-heading">Catering menu items.</h2>
-          <p class="section-sub" style="margin-inline: auto;">Mark your selections when you call. We will confirm your menu and pickup time over the phone.</p>
+        <div class="section-head--center">
+          <span class="eyebrow eyebrow--centered" data-reveal>The Spread</span>
+          <h2 class="section-heading section-heading--underline" data-reveal>Catering Menu Items</h2>
+          <p class="section-sub" data-reveal>Mix and match — every item is made fresh on the day of your event.</p>
         </div>
 
-        <div class="cat-list reveal">
-          <article class="cat-item">
+        <div class="cat-list">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Hummus</h3>
-            <p class="cat-item__desc">Chickpeas, parsley and olive oil.</p>
+            <p class="cat-item__desc">Chickpeas, parsley, and olive oil — the cornerstone of the Mediterranean table.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Falafel</h3>
-            <p class="cat-item__desc">Sautéed chickpeas, hand-rolled and fried fresh.</p>
+            <p class="cat-item__desc">Sautéed chickpeas — golden, crisp, and made the traditional way.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Israeli Salad</h3>
-            <p class="cat-item__desc">A mix of fresh tomatoes, cucumbers, and parsley.</p>
+            <p class="cat-item__desc">Mixed tomatoes, cucumbers, and parsley. Fresh, simple, perfect.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Cabbage Salad</h3>
-            <p class="cat-item__desc">A refreshing Middle Eastern slaw — finely shredded green cabbage with lemon, salt, and olive oil dressing.</p>
+            <p class="cat-item__desc">Finely shredded green cabbage with lemon, salt, and olive oil dressing.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Baba Ganoush Salad</h3>
-            <p class="cat-item__desc">A smoky Levantine dish of charred roasted eggplant, fresh vegetables, olive oil, and tahini.</p>
+            <p class="cat-item__desc">Roasted eggplant with fresh vegetables, olive oil, and tahini.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Mix Pickles</h3>
             <p class="cat-item__desc">Cucumbers preserved with vinegar and salt, Mediterranean green olives, and pickled marinated vegetables.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Tahini</h3>
-            <p class="cat-item__desc">Traditional tahini dressing — perfect with falafel.</p>
+            <p class="cat-item__desc">Traditional tahini dressing — the perfect partner for falafel.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Mediterranean Tahini Dressing</h3>
-            <p class="cat-item__desc">Mediterranean-style tahini dressing — bright, herbal, and creamy.</p>
+            <p class="cat-item__desc">A Mediterranean-style tahini dressing with herbs and lemon.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Yemenite Schug</h3>
-            <p class="cat-item__desc">Spicy herb sauce — bold, aromatic, and unmistakably Yemenite.</p>
+            <p class="cat-item__desc">Spicy herb sauce — bold, aromatic, and a little fiery.</p>
           </article>
-          <article class="cat-item">
+          <article class="cat-item" data-reveal>
             <h3 class="cat-item__name">Pita Bread</h3>
-            <p class="cat-item__desc">Warm, fresh-baked pita.</p>
+            <p class="cat-item__desc">Warm, fresh-baked pita — the foundation of the meal.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ============== HOW TO ORDER ============== -->
-    <section class="section section--cream">
+    <section class="section section--tan">
       <div class="container">
-        <div style="text-align: center; max-width: 640px; margin: 0 auto var(--space-9);" class="reveal">
-          <span class="eyebrow" style="justify-content: center;">How it Works</span>
-          <h2 class="section-heading">Place a catering order in three steps.</h2>
+        <div class="section-head--center">
+          <span class="eyebrow eyebrow--centered" data-reveal>Three Steps</span>
+          <h2 class="section-heading section-heading--underline" data-reveal>How to Place a Catering Order</h2>
         </div>
 
         <div class="steps-grid">
-          <article class="step reveal">
-            <span class="step__num">01</span>
-            <h3 class="step__head">Call Us</h3>
-            <p class="step__body">Call <a href="tel:+17709024454" style="color: var(--color-coral); font-weight: 600;">770-902-4454</a> or <a href="tel:+16785802215" style="color: var(--color-coral); font-weight: 600;">678-580-2215</a> to discuss your event, guest count, and menu selection.</p>
+          <article class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">01</span>
+            <h3 class="step__heading">Call Us</h3>
+            <p class="step__body">Call <a href="tel:+17709024454">770-902-4454</a> or <a href="tel:+16785802215">678-580-2215</a> to discuss your event, guest count, and menu selections.</p>
           </article>
 
-          <article class="step reveal">
-            <span class="step__num">02</span>
-            <h3 class="step__head">Confirm &amp; Prepay</h3>
-            <p class="step__body">All catering orders require prepayment to confirm. Your date and menu are secured upon payment. Cancellations are non-refundable.</p>
+          <article class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">02</span>
+            <h3 class="step__heading">Confirm &amp; Prepay</h3>
+            <p class="step__body">All orders require prepayment to confirm. Your date and menu are secured upon payment.</p>
           </article>
 
-          <article class="step reveal">
-            <span class="step__num">03</span>
-            <h3 class="step__head">Pick Up</h3>
-            <p class="step__body">Your order is freshly prepared and ready at the time you arrange. Pick up at 4343 Dunwoody Park, Dunwoody, GA 30338.</p>
+          <article class="step" data-reveal>
+            <span class="step__num" aria-hidden="true">03</span>
+            <h3 class="step__heading">Pick Up Fresh</h3>
+            <p class="step__body">Your order will be freshly prepared and ready for pickup at <strong>4343 Dunwoody Park</strong> at your confirmed time.</p>
           </article>
         </div>
       </div>
     </section>
 
     <!-- ============== CTA ============== -->
-    <section class="section section--dark" style="text-align: center;">
+    <section class="section section--off-black">
       <div class="container">
-        <div class="reveal" style="max-width: 640px; margin: 0 auto;">
-          <h2 class="section-heading" style="margin-bottom: var(--space-5);">Ready to book?</h2>
-          <p style="font-size: 17px; line-height: 1.7; color: var(--color-tan-muted); margin-bottom: var(--space-7);">Call us to get started. We handle groups of twelve and above — for offices, gatherings, celebrations, and any reason you need to feed people well.</p>
-          <a class="btn btn--primary btn--large" href="tel:+17709024454">Call 770-902-4454</a>
+        <div style="text-align: center; max-width: 720px; margin-inline: auto;">
+          <span class="eyebrow eyebrow--gold eyebrow--centered" data-reveal>Get In Touch</span>
+          <h2 class="section-heading" data-reveal style="color: var(--c-cream); margin-bottom: var(--s-5);">Ready to book your event?</h2>
+          <p class="section-sub" data-reveal style="margin-inline: auto; margin-bottom: var(--s-7);">Call us directly. We work with groups of 12 and above, and we'll walk you through every detail.</p>
+          <div data-reveal style="display: flex; gap: var(--s-5); justify-content: center; flex-wrap: wrap;">
+            <a class="btn btn--primary btn--large" href="tel:+17709024454">Call 770-902-4454</a>
+            <a class="btn btn--ghost" href="contact.html" style="color: var(--c-cream);">Or Send a Message →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -223,47 +216,72 @@
 
   <!-- ============== FOOTER ============== -->
   <footer class="site-footer">
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1400 24" preserveAspectRatio="none">
+        <path d="M0 12 Q 100 4, 200 12 T 400 12 T 600 12 T 800 12 T 1000 12 T 1200 12 T 1400 12"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img class="footer-col__logo" src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
-          <p class="footer-tagline">Where tradition meets the table.</p>
+          <img class="footer-logo" src="images/logo.png" alt="Hummus Village" width="120" height="120">
+          <p class="footer-tag">Where tradition meets the table.</p>
           <p class="footer-eco">We compost organic waste, recycle our oil and paper products, and take our responsibility to this community seriously.</p>
+          <div class="footer-social" aria-label="Social media">
+            <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg class="ic-fb" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+            </a>
+          </div>
         </div>
-
         <div class="footer-col">
-          <h4 class="footer-h">Pages</h4>
-          <nav class="footer-links" aria-label="Footer navigation">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About</a>
-            <a href="catering.html">Catering</a>
-            <a href="contact.html">Contact</a>
+          <h4>Pages</h4>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="catering.html">Catering</a><a href="contact.html">Contact</a>
           </nav>
         </div>
-
         <div class="footer-col">
-          <h4 class="footer-h">Visit Us</h4>
+          <h4>Hours</h4>
           <div class="footer-contact">
-            <a href="https://www.google.com/maps/search/?api=1&query=4343+Dunwoody+Park,+Dunwoody,+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
+            <span>Mon — Fri  ·  11am — 4pm</span>
+            <span style="color: #E85C3A;">Saturday  ·  Closed</span>
+            <span>Sunday  ·  12pm — 5pm</span>
+            <span style="opacity:0.6; font-style: italic; font-size: 13px; margin-top: 8px;">Closed on major holidays.</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <div class="footer-contact">
+            <a href="https://maps.google.com/?q=4343+Dunwoody+Park+Dunwoody+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
             <a class="footer-phone" href="tel:+17709024454">770-902-4454</a>
             <a class="footer-phone" href="tel:+16785802215">678-580-2215</a>
-            <span>Mon — Fri 11am — 4pm  ·  Sun 12pm — 5pm</span>
-            <div class="footer-social" aria-label="Social media">
-              <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2025 Hummus Village. All rights reserved.</p>
+        <p>&copy; 2025 Hummus Village — Dunwoody, Georgia. Where Tradition Meets the Table.</p>
       </div>
+    </div>
+    <div class="footer-doodle" aria-hidden="true">
+      <svg viewBox="0 0 1400 220" preserveAspectRatio="none">
+        <path d="M40 200 Q 200 130, 400 110 T 700 90 T 1000 100 T 1360 80"/>
+        <ellipse cx="200" cy="148" rx="14" ry="5" transform="rotate(-15 200 148)"/>
+        <ellipse cx="320" cy="125" rx="14" ry="5" transform="rotate(-12 320 125)"/>
+        <ellipse cx="450" cy="108" rx="14" ry="5" transform="rotate(-8 450 108)"/>
+        <ellipse cx="580" cy="100" rx="14" ry="5" transform="rotate(-4 580 100)"/>
+        <ellipse cx="720" cy="92" rx="14" ry="5" transform="rotate(0 720 92)"/>
+        <ellipse cx="860" cy="96" rx="14" ry="5" transform="rotate(4 860 96)"/>
+        <ellipse cx="1000" cy="100" rx="14" ry="5" transform="rotate(8 1000 100)"/>
+        <ellipse cx="1140" cy="92" rx="14" ry="5" transform="rotate(10 1140 92)"/>
+        <ellipse cx="1280" cy="84" rx="14" ry="5" transform="rotate(12 1280 84)"/>
+        <circle cx="260" cy="138" r="6"/>
+        <circle cx="520" cy="105" r="6"/>
+        <circle cx="800" cy="95" r="6"/>
+        <circle cx="1080" cy="98" r="6"/>
+        <circle cx="1320" cy="82" r="6"/>
+      </svg>
     </div>
   </footer>
 
