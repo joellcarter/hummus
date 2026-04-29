@@ -4,23 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact — Hummus Village | Dunwoody, GA</title>
-  <meta name="description" content="Find Hummus Village at 4343 Dunwoody Park, Dunwoody, GA 30338. Call us or reach us on Facebook and Instagram.">
+  <meta name="description" content="Visit Hummus Village in Dunwoody, GA. Call 770-902-4454 to order, ask about catering, or share feedback.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&family=Satisfy&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Satisfy&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+  <div class="page-overlay" aria-hidden="true"></div>
 
-  <!-- ============== NAVIGATION ============== -->
   <header>
-    <nav class="nav" aria-label="Main navigation">
+    <nav class="nav is-solid" aria-label="Main navigation">
       <div class="container nav__inner">
         <a href="index.html" class="nav__logo" aria-label="Hummus Village — Home">
-          <img src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
+          <img src="images/logo.png" alt="Hummus Village" width="120" height="120">
           <span class="nav__logo-text">Hummus Village</span>
         </a>
-
         <ul class="nav__links">
           <li><a class="nav__link" href="index.html">Home</a></li>
           <li><a class="nav__link" href="menu.html">Menu</a></li>
@@ -28,69 +32,71 @@
           <li><a class="nav__link" href="catering.html">Catering</a></li>
           <li><a class="nav__link" href="contact.html">Contact</a></li>
         </ul>
-
         <a class="nav__cta" href="tel:+17709024454">Order by Phone</a>
-
         <button class="nav__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span><span></span><span></span>
+          <svg viewBox="0 0 28 28" aria-hidden="true">
+            <line x1="4" y1="9" x2="24" y2="9"></line>
+            <line x1="4" y1="14" x2="24" y2="14"></line>
+            <line x1="4" y1="19" x2="24" y2="19"></line>
+          </svg>
         </button>
       </div>
     </nav>
 
     <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-      <div class="mobile-menu__backdrop"></div>
-      <div class="mobile-menu__panel">
+      <img class="mobile-menu__logo" src="images/logo.png" alt="Hummus Village">
+      <nav class="mobile-menu__links" aria-label="Mobile">
         <a class="mobile-menu__link" href="index.html">Home</a>
         <a class="mobile-menu__link" href="menu.html">Menu</a>
         <a class="mobile-menu__link" href="about.html">About</a>
         <a class="mobile-menu__link" href="catering.html">Catering</a>
         <a class="mobile-menu__link" href="contact.html">Contact</a>
-        <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
-      </div>
+      </nav>
+      <a class="mobile-menu__cta" href="tel:+17709024454">Call 770 902 4454</a>
     </div>
   </header>
 
   <main>
 
-    <!-- ============== CONTACT HERO ============== -->
-    <section class="page-hero page-hero--cream" style="min-height: 300px;">
-      <div class="container page-hero__inner">
-        <span class="eyebrow">Stop By, Call, or Write</span>
-        <h1 class="page-hero__h1">Get in touch.</h1>
-        <p class="page-hero__sub">We are happy to answer questions, take orders by phone, and assist with catering inquiries.</p>
+    <!-- ============== PAGE HERO ============== -->
+    <section class="page-hero page-hero--cream">
+      <div class="container">
+        <div class="page-hero__inner page-hero__inner--split-narrow">
+          <div>
+            <span class="eyebrow">Stop By or Reach Out</span>
+            <h1 class="page-hero__h1">Come Find Us</h1>
+            <p class="page-hero__sub">We are happy to take orders by phone, answer questions, and discuss catering. Tell us what you need.</p>
+          </div>
+          <div class="page-hero__canvas-wrap" style="aspect-ratio: 4/3; max-height: 320px;">
+            <canvas class="page-hero__canvas" data-three="contact-sprig" aria-hidden="true"></canvas>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ============== CONTACT MAIN ============== -->
+    <!-- ============== INFO + MAP ============== -->
     <section class="section section--white">
       <div class="container">
         <div class="contact-grid">
-
-          <!-- LEFT COLUMN — DETAILS -->
-          <div class="reveal">
-
+          <div data-reveal>
             <div class="contact-block">
-              <h2 class="contact-block__heading">Visit Us</h2>
+              <h3 class="contact-block__heading">Visit Us</h3>
               <p>
-                <a href="https://www.google.com/maps/search/?api=1&query=4343+Dunwoody+Park,+Dunwoody,+GA+30338" target="_blank" rel="noopener noreferrer">
-                  4343 Dunwoody Park<br>
-                  Dunwoody, GA 30338
-                </a>
+                <a href="https://maps.google.com/?q=4343+Dunwoody+Park+Dunwoody+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
               </p>
-              <p style="margin-top: var(--space-3); color: rgba(44, 26, 14, 0.7);">Parking available on-site. We offer both dine-in and takeout.</p>
+              <p style="font-style: italic; font-size: 14px; opacity: 0.7; margin-top: 8px;">Parking available on-site. Dine-in and takeout.</p>
             </div>
 
             <div class="contact-block">
-              <h2 class="contact-block__heading">Call to Order</h2>
+              <h3 class="contact-block__heading">Call to Order</h3>
               <div class="contact-phones">
                 <a class="contact-phone" href="tel:+17709024454">770-902-4454</a>
                 <a class="contact-phone" href="tel:+16785802215">678-580-2215</a>
               </div>
-              <p style="margin-top: var(--space-4); color: rgba(44, 26, 14, 0.7);">Both numbers accept phone orders for pickup.</p>
             </div>
 
             <div class="contact-block">
-              <h2 class="contact-block__heading">Hours</h2>
+              <h3 class="contact-block__heading">Hours</h3>
               <div class="hours-table">
                 <div class="hours-row">
                   <span class="hours-row__day">Monday — Friday</span>
@@ -109,66 +115,198 @@
             </div>
 
             <div class="contact-block">
-              <h2 class="contact-block__heading">Connect</h2>
-              <p style="margin-bottom: var(--space-4);">
-                <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer">Hummus Village on Facebook</a>
-              </p>
-              <p style="margin-bottom: var(--space-4);">
+              <h3 class="contact-block__heading">Follow Us</h3>
+              <p>
+                <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer">Hummus Village on Facebook</a><br>
                 <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer">@hummusvillage on Instagram</a>
               </p>
-              <p style="color: rgba(44, 26, 14, 0.65); font-style: italic; font-size: 14px;">You can also reach us via Facebook Messenger for general inquiries.</p>
+              <p style="font-style: italic; font-size: 14px; opacity: 0.7; margin-top: 8px;">Reach us via Facebook Messenger for general inquiries.</p>
             </div>
-
           </div>
 
-          <!-- RIGHT COLUMN — MAP -->
-          <div class="reveal">
-            <iframe class="map-frame"
+          <div data-reveal>
+            <iframe class="map-frame" style="height: 500px;"
               src="https://www.google.com/maps?q=4343+Dunwoody+Park,+Dunwoody,+GA+30338&output=embed"
               title="Map of Hummus Village at 4343 Dunwoody Park, Dunwoody, GA"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              style="height: 480px;"></iframe>
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ============== CONTACT FORM ============== -->
-    <section class="section contact-form-wrap">
+    <!-- ============== WIZARD FORM ============== -->
+    <section class="section wizard-wrap">
       <div class="container">
-        <div class="contact-form__head reveal">
-          <span class="eyebrow" style="justify-content: center;">Send a Note</span>
-          <h2 class="section-heading">Send a message.</h2>
-          <p class="section-sub" style="margin-inline: auto; text-align: center;">For general inquiries, catering questions, or feedback. We read every message.</p>
+        <div class="wizard">
+          <div class="wizard__head">
+            <span class="eyebrow eyebrow--centered" data-reveal>Send Us a Note</span>
+            <h2 class="section-heading section-heading--underline" data-reveal>Send Us a Message</h2>
+            <p class="section-sub" data-reveal style="margin-inline: auto;">Tell us a little about what you need — the more detail you give, the better we can help.</p>
+          </div>
+
+          <div class="wizard__progress" aria-hidden="true">
+            <span class="wizard__step-num is-current">01</span>
+            <span class="wizard__step-divider"></span>
+            <span class="wizard__step-num">02</span>
+            <span class="wizard__step-divider"></span>
+            <span class="wizard__step-num">03</span>
+          </div>
+
+          <form class="wizard__steps" novalidate>
+            <!-- STEP 1 -->
+            <div class="wizard__step is-current" data-step="1">
+              <span class="wizard__step-label">Step 01 — Who Are You?</span>
+              <h3 class="wizard__step-heading">Let's start with you.</h3>
+
+              <div class="field">
+                <label for="full_name">Your Full Name</label>
+                <input type="text" id="full_name" name="full_name" required placeholder="How should we address you?">
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Best number to reach you">
+              </div>
+
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Optional — if you prefer email">
+              </div>
+
+              <div class="wizard__nav">
+                <span></span>
+                <button type="button" class="btn btn--primary" data-wizard-next>Continue to Step 2 →</button>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="wizard__step" data-step="2">
+              <span class="wizard__step-label">Step 02 — What Do You Need?</span>
+              <h3 class="wizard__step-heading">Tell us about your inquiry.</h3>
+
+              <div class="field">
+                <label>What is this about?</label>
+                <div class="radio-tiles" role="radiogroup">
+                  <label class="radio-tile">
+                    <input type="radio" name="inquiry_type" value="general" required>
+                    <div class="radio-tile__svg">
+                      <svg viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8 Q 6 6, 8 6 H 24 Q 26 6, 26 8 V 18 Q 26 20, 24 20 H 14 L 8 26 V 20 Q 6 20, 6 18 Z"/><circle cx="12" cy="13" r="1"/><circle cx="16" cy="13" r="1"/><circle cx="20" cy="13" r="1"/></g></svg>
+                    </div>
+                    <span class="radio-tile__label">General Question</span>
+                  </label>
+
+                  <label class="radio-tile">
+                    <input type="radio" name="inquiry_type" value="catering" required>
+                    <div class="radio-tile__svg">
+                      <svg viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="16" cy="22" rx="12" ry="3"/><ellipse cx="16" cy="18" rx="11" ry="2.5"/><ellipse cx="16" cy="14" rx="10" ry="2.2"/><ellipse cx="16" cy="10" rx="9" ry="2"/></g></svg>
+                    </div>
+                    <span class="radio-tile__label">Catering Inquiry</span>
+                  </label>
+
+                  <label class="radio-tile">
+                    <input type="radio" name="inquiry_type" value="feedback" required>
+                    <div class="radio-tile__svg">
+                      <svg viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4 L 19.5 12 L 28 13 L 22 19 L 23.5 27 L 16 23 L 8.5 27 L 10 19 L 4 13 L 12.5 12 Z"/></g></svg>
+                    </div>
+                    <span class="radio-tile__label">Feedback or Review</span>
+                  </label>
+
+                  <label class="radio-tile">
+                    <input type="radio" name="inquiry_type" value="other" required>
+                    <div class="radio-tile__svg">
+                      <svg viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="11"/><path d="M12 12 Q 12 9, 16 9 Q 20 9, 20 12 Q 20 14, 17 16 Q 16 17, 16 19"/><circle cx="16" cy="23" r="1"/></g></svg>
+                    </div>
+                    <span class="radio-tile__label">Something Else</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="field field--conditional" data-show-if="inquiry_type=catering">
+                <label for="group_size">Approximately how many guests?</label>
+                <select id="group_size" name="group_size">
+                  <option value="">Not applicable</option>
+                  <option value="12-20">12 – 20 guests</option>
+                  <option value="21-40">21 – 40 guests</option>
+                  <option value="41-60">41 – 60 guests</option>
+                  <option value="61-100">61 – 100 guests</option>
+                  <option value="100+">100+ guests</option>
+                </select>
+              </div>
+
+              <div class="field field--conditional" data-show-if="inquiry_type=catering">
+                <label for="event_date">Approximate event date</label>
+                <input type="date" id="event_date" name="event_date">
+              </div>
+
+              <div class="wizard__nav">
+                <button type="button" class="wizard__back" data-wizard-back>← Back to Step 1</button>
+                <button type="button" class="btn btn--primary" data-wizard-next>Continue to Step 3 →</button>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="wizard__step" data-step="3">
+              <span class="wizard__step-label">Step 03 — Your Message</span>
+              <h3 class="wizard__step-heading">Almost done — tell us more.</h3>
+
+              <div class="field">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Ask about our menu, discuss a catering event, share feedback, or anything else."></textarea>
+              </div>
+
+              <div class="field">
+                <label for="how_heard">How did you hear about Hummus Village?</label>
+                <select id="how_heard" name="how_heard">
+                  <option value="">Please select</option>
+                  <option value="google_search">Google Search</option>
+                  <option value="google_maps">Google Maps</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="instagram">Instagram</option>
+                  <option value="word_of_mouth">Word of mouth</option>
+                  <option value="walked_past">Walked past</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="field field--check">
+                <label class="checkbox">
+                  <input type="checkbox" name="consent" required>
+                  <span class="checkbox__box" aria-hidden="true"></span>
+                </label>
+                <label for="consent">I agree that Hummus Village may contact me regarding my inquiry.</label>
+              </div>
+
+              <div class="wizard__nav">
+                <button type="button" class="wizard__back" data-wizard-back>← Back to Step 2</button>
+                <button type="button" class="btn btn--primary btn--large" data-wizard-submit>Send Message</button>
+              </div>
+            </div>
+          </form>
+
+          <!-- SUCCESS -->
+          <div class="wizard__success">
+            <div class="wizard__success-svg">
+              <svg viewBox="0 0 140 140">
+                <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="70" cy="92" rx="50" ry="14"/>
+                  <path d="M20 92 Q 20 50, 70 50 Q 120 50, 120 92"/>
+                  <path d="M40 70 q 14 -16 30 -4 q 16 12 30 4"/>
+                  <ellipse cx="56" cy="78" rx="3" ry="2"/>
+                  <ellipse cx="74" cy="80" rx="3" ry="2"/>
+                  <ellipse cx="86" cy="76" rx="3" ry="2"/>
+                  <path d="M70 50 Q 76 38, 90 36"/>
+                  <ellipse cx="84" cy="36" rx="6" ry="2.4" transform="rotate(-25 84 36)"/>
+                  <circle cx="92" cy="34" r="3"/>
+                </g>
+              </svg>
+            </div>
+            <h3 class="wizard__success-h">Thank you!</h3>
+            <p class="wizard__success-p">We have received your message and will be in touch.</p>
+            <a class="wizard__success-link" href="menu.html">Back to the Menu →</a>
+          </div>
+
         </div>
-
-        <form class="contact-form reveal" action="mailto:hummusvillage@gmail.com" method="POST" enctype="text/plain" novalidate>
-
-          <div class="field">
-            <label for="cf-name">Your Name</label>
-            <input id="cf-name" name="name" type="text" required placeholder="How should we address you?" autocomplete="name">
-          </div>
-
-          <div class="field">
-            <label for="cf-phone">Phone Number</label>
-            <input id="cf-phone" name="phone" type="tel" placeholder="Optional — if you prefer a callback" autocomplete="tel">
-          </div>
-
-          <div class="field">
-            <label for="cf-message">Your Message</label>
-            <textarea id="cf-message" name="message" required rows="5" placeholder="Ask about catering, hours, or anything else."></textarea>
-          </div>
-
-          <div>
-            <button type="submit" class="btn btn--primary btn--large" style="width: 100%;">Send Message</button>
-          </div>
-
-          <p style="font-size: 13px; color: rgba(44, 26, 14, 0.55); text-align: center; font-style: italic; margin-top: var(--space-3);">
-            By submitting this form, you agree to be contacted by Hummus Village regarding your message.
-          </p>
-        </form>
       </div>
     </section>
 
@@ -176,47 +314,72 @@
 
   <!-- ============== FOOTER ============== -->
   <footer class="site-footer">
+    <div class="footer-wave" aria-hidden="true">
+      <svg viewBox="0 0 1400 24" preserveAspectRatio="none">
+        <path d="M0 12 Q 100 4, 200 12 T 400 12 T 600 12 T 800 12 T 1000 12 T 1200 12 T 1400 12"/>
+      </svg>
+    </div>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <img class="footer-col__logo" src="images/logo.png" alt="Hummus Village Logo" width="120" height="120">
-          <p class="footer-tagline">Where tradition meets the table.</p>
+          <img class="footer-logo" src="images/logo.png" alt="Hummus Village" width="120" height="120">
+          <p class="footer-tag">Where tradition meets the table.</p>
           <p class="footer-eco">We compost organic waste, recycle our oil and paper products, and take our responsibility to this community seriously.</p>
+          <div class="footer-social" aria-label="Social media">
+            <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg class="ic-fb" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+            </a>
+          </div>
         </div>
-
         <div class="footer-col">
-          <h4 class="footer-h">Pages</h4>
-          <nav class="footer-links" aria-label="Footer navigation">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="about.html">About</a>
-            <a href="catering.html">Catering</a>
-            <a href="contact.html">Contact</a>
+          <h4>Pages</h4>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a><a href="menu.html">Menu</a><a href="about.html">About</a><a href="catering.html">Catering</a><a href="contact.html">Contact</a>
           </nav>
         </div>
-
         <div class="footer-col">
-          <h4 class="footer-h">Visit Us</h4>
+          <h4>Hours</h4>
           <div class="footer-contact">
-            <a href="https://www.google.com/maps/search/?api=1&query=4343+Dunwoody+Park,+Dunwoody,+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
+            <span>Mon — Fri  ·  11am — 4pm</span>
+            <span style="color: #E85C3A;">Saturday  ·  Closed</span>
+            <span>Sunday  ·  12pm — 5pm</span>
+            <span style="opacity:0.6; font-style: italic; font-size: 13px; margin-top: 8px;">Closed on major holidays.</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <div class="footer-contact">
+            <a href="https://maps.google.com/?q=4343+Dunwoody+Park+Dunwoody+GA+30338" target="_blank" rel="noopener noreferrer">4343 Dunwoody Park<br>Dunwoody, GA 30338</a>
             <a class="footer-phone" href="tel:+17709024454">770-902-4454</a>
             <a class="footer-phone" href="tel:+16785802215">678-580-2215</a>
-            <span>Mon — Fri 11am — 4pm  ·  Sun 12pm — 5pm</span>
-            <div class="footer-social" aria-label="Social media">
-              <a href="https://www.facebook.com/p/Hummus-Village-61579497749082/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12z"/></svg>
-              </a>
-              <a href="https://www.instagram.com/hummusvillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-              </a>
-            </div>
           </div>
         </div>
       </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2025 Hummus Village. All rights reserved.</p>
+        <p>&copy; 2025 Hummus Village — Dunwoody, Georgia. Where Tradition Meets the Table.</p>
       </div>
+    </div>
+    <div class="footer-doodle" aria-hidden="true">
+      <svg viewBox="0 0 1400 220" preserveAspectRatio="none">
+        <path d="M40 200 Q 200 130, 400 110 T 700 90 T 1000 100 T 1360 80"/>
+        <ellipse cx="200" cy="148" rx="14" ry="5" transform="rotate(-15 200 148)"/>
+        <ellipse cx="320" cy="125" rx="14" ry="5" transform="rotate(-12 320 125)"/>
+        <ellipse cx="450" cy="108" rx="14" ry="5" transform="rotate(-8 450 108)"/>
+        <ellipse cx="580" cy="100" rx="14" ry="5" transform="rotate(-4 580 100)"/>
+        <ellipse cx="720" cy="92" rx="14" ry="5" transform="rotate(0 720 92)"/>
+        <ellipse cx="860" cy="96" rx="14" ry="5" transform="rotate(4 860 96)"/>
+        <ellipse cx="1000" cy="100" rx="14" ry="5" transform="rotate(8 1000 100)"/>
+        <ellipse cx="1140" cy="92" rx="14" ry="5" transform="rotate(10 1140 92)"/>
+        <ellipse cx="1280" cy="84" rx="14" ry="5" transform="rotate(12 1280 84)"/>
+        <circle cx="260" cy="138" r="6"/>
+        <circle cx="520" cy="105" r="6"/>
+        <circle cx="800" cy="95" r="6"/>
+        <circle cx="1080" cy="98" r="6"/>
+        <circle cx="1320" cy="82" r="6"/>
+      </svg>
     </div>
   </footer>
 
