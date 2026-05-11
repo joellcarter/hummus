@@ -69,7 +69,10 @@ a { color: inherit; text-decoration: none; }
 ul, ol { list-style: none; padding: 0; margin: 0; }
 input, textarea, select { font: inherit; color: inherit; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;  /* required alongside body — body alone is not reliable cross-browser */
+}
 
 body {
   font-family: var(--f-body);
@@ -1426,6 +1429,7 @@ p:last-child { margin-bottom: 0; }
 .values {
   background-color: var(--c-brown);
   color: var(--c-tan-muted);
+  overflow: hidden;
 }
 .values__grid {
   display: grid;
@@ -2116,6 +2120,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------- 22. PHOTO FILM STRIP ---------- */
 .photo-strip {
+  position: relative;
   overflow: hidden;
   height: 240px;
   display: flex;
