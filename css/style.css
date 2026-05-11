@@ -2214,7 +2214,42 @@ p:last-child { margin-bottom: 0; }
   transform: scale(1.06);
 }
 
-/* ---------- 24. STOREFRONT PHOTO (About hero) ---------- */
+/* ---------- 24. DESSERT PHOTO PANEL ---------- */
+.dessert-panel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+.dessert-panel__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 450ms var(--ease-primary),
+              transform 600ms var(--ease-primary);
+}
+.dessert-panel__img.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ---------- 24b. DARK MENU ITEMS (Dessert section) ---------- */
+.menu-list--dark .menu-item--dark {
+  border-bottom-color: rgba(232, 220, 200, 0.15);
+}
+.menu-list--dark .menu-item--dark:hover {
+  background-color: rgba(255, 253, 248, 0.05);
+}
+.menu-section__photo--dark {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- 25. STOREFRONT PHOTO (About hero) ---------- */
 .storefront-wrap {
   width: 100%;
   aspect-ratio: 3 / 4;
