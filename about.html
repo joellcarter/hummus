@@ -16,6 +16,31 @@
   <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
+  <!-- ===== PRELOADER ===== -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__scene">
+      <svg class="preloader__rings" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle class="pl-ring pl-ring--outer" cx="120" cy="120" r="108"/>
+        <circle class="pl-ring pl-ring--inner" cx="120" cy="120" r="96"/>
+        <circle class="pl-dot pl-dot--n"  cx="120"   cy="12"    r="3.5"/>
+        <circle class="pl-dot pl-dot--ne" cx="196.4" cy="43.6"  r="3.5"/>
+        <circle class="pl-dot pl-dot--e"  cx="228"   cy="120"   r="3.5"/>
+        <circle class="pl-dot pl-dot--se" cx="196.4" cy="196.4" r="3.5"/>
+        <circle class="pl-dot pl-dot--s"  cx="120"   cy="228"   r="3.5"/>
+        <circle class="pl-dot pl-dot--sw" cx="43.6"  cy="196.4" r="3.5"/>
+        <circle class="pl-dot pl-dot--w"  cx="12"    cy="120"   r="3.5"/>
+        <circle class="pl-dot pl-dot--nw" cx="43.6"  cy="43.6"  r="3.5"/>
+      </svg>
+      <div class="preloader__logo-wrap">
+        <img class="preloader__logo-img" src="images/logo.png" alt="Hummus Village">
+      </div>
+      <div class="preloader__glow" aria-hidden="true"></div>
+    </div>
+    <p class="preloader__tagline">Where Tradition Meets the Table</p>
+    <div class="preloader__bar" aria-hidden="true"></div>
+  </div>
+  <!-- ===== /PRELOADER ===== -->
+
   <div class="page-overlay" aria-hidden="true"></div>
 
   <header>
@@ -266,6 +291,7 @@
     </div>
   </footer>
 
+  <script src="js/preloader.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
