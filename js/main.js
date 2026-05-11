@@ -1011,6 +1011,26 @@
     }
   }
 
+  /* ---------- Dessert photo hover ---------- */
+  function initDessertHover() {
+    const items = document.querySelectorAll('[data-dessert]');
+    const imgs  = document.querySelectorAll('[data-dessert-img]');
+    if (!items.length || !imgs.length) return;
+
+    function show(key) {
+      imgs.forEach(img => {
+        img.classList.toggle('is-active', img.dataset.dessertImg === key);
+      });
+    }
+
+    items.forEach(item => {
+      item.addEventListener('mouseenter', () => show(item.dataset.dessert));
+      item.addEventListener('focus',      () => show(item.dataset.dessert));
+      item.addEventListener('mouseleave', () => show('baklava'));
+      item.addEventListener('blur',       () => show('baklava'));
+    });
+  }
+
   /* ---------- Init on DOM ready ---------- */
   function init() {
     setupGsap(); // register ScrollTrigger plugin now that gsap is loaded
@@ -1026,6 +1046,7 @@
     initCounters();
     initQuoteWords();
     initMenuPreview();
+    initDessertHover();
     initWizard();
 
     // Refresh ScrollTrigger after a tick to catch async content
