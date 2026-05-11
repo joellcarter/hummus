@@ -284,38 +284,45 @@
     <!-- ============== DESSERT & DRINKS ============== -->
     <section class="menu-section section--dark" id="desserts">
       <div class="container">
-        <div style="text-align: center; margin-bottom: var(--s-9);">
-          <div data-reveal><span class="eyebrow eyebrow--gold eyebrow--centered">A Sweet Finish</span></div>
-          <h2 class="menu-section__title section-heading--underline" data-reveal>Dessert &amp; Drinks</h2>
-        </div>
+        <div class="menu-section__inner">
+          <div class="menu-section__visual">
+            <div class="dessert-panel">
+              <img class="dessert-panel__img is-active" data-dessert-img="baklava"  src="images/dessert-baklava.jpeg" alt="Honey-soaked baklava" loading="lazy">
+              <img class="dessert-panel__img"            data-dessert-img="coffee"   src="images/dessert-coffee.png"  alt="Turkish coffee brewing in a cezve" loading="lazy">
+              <img class="dessert-panel__img"            data-dessert-img="tea"      src="images/dessert-tea.jpeg"    alt="Herb tea being poured" loading="lazy">
+            </div>
+          </div>
 
-        <div class="dessert-grid">
-          <article class="dessert-card dessert-card--feature" data-reveal>
-            <div class="dessert-card__canvas">
-              <canvas data-three="baklava" aria-hidden="true"></canvas>
-            </div>
-            <div>
-              <h3 class="dessert-card__name">Baklava / Knafeh</h3>
-              <p class="dessert-card__desc">Traditional Mediterranean pastry — honeyed, flaky, and sweet. The kind of dessert your grandmother would approve of.</p>
-            </div>
-            <span class="dessert-card__price">$4</span>
-          </article>
+          <div>
+            <span class="menu-section__label">A Sweet Finish</span>
+            <h2 class="menu-section__title" style="color: var(--c-cream);">Dessert &amp; Drinks</h2>
 
-          <article class="dessert-card" data-reveal>
-            <div>
-              <h3 class="dessert-card__name">Turkish Coffee / Herb Tea</h3>
-              <p class="dessert-card__desc">Authentic Turkish coffee, or a selection of Mediterranean herb teas.</p>
-            </div>
-            <span class="dessert-card__price">$3.50</span>
-          </article>
+            <div class="menu-list menu-list--dark">
+              <article class="menu-item menu-item--simple menu-item--dark" data-dessert="baklava" data-reveal>
+                <div>
+                  <h3 class="menu-item__name" style="color: var(--c-cream);">Baklava / Knafeh</h3>
+                  <p class="menu-item__desc" style="color: var(--c-tan-muted);">Traditional Mediterranean pastry — honeyed, flaky, and sweet. The kind of dessert your grandmother would approve of.</p>
+                </div>
+                <span class="menu-item__price">$4</span>
+              </article>
 
-          <article class="dessert-card" data-reveal>
-            <div>
-              <h3 class="dessert-card__name">Drinks</h3>
-              <p class="dessert-card__desc">Soft drinks, water, and juices. Ask for today's selection.</p>
+              <article class="menu-item menu-item--simple menu-item--dark" data-dessert="coffee" data-reveal>
+                <div>
+                  <h3 class="menu-item__name" style="color: var(--c-cream);">Turkish Coffee / Herb Tea</h3>
+                  <p class="menu-item__desc" style="color: var(--c-tan-muted);">Authentic Turkish coffee, or a selection of Mediterranean herb teas.</p>
+                </div>
+                <span class="menu-item__price">$3.50</span>
+              </article>
+
+              <article class="menu-item menu-item--simple menu-item--dark" data-dessert="tea" data-reveal>
+                <div>
+                  <h3 class="menu-item__name" style="color: var(--c-cream);">Drinks</h3>
+                  <p class="menu-item__desc" style="color: var(--c-tan-muted);">Soft drinks, water, and juices. Ask for today's selection.</p>
+                </div>
+                <span class="menu-item__price">$3</span>
+              </article>
             </div>
-            <span class="dessert-card__price">$3</span>
-          </article>
+          </div>
         </div>
       </div>
     </section>
