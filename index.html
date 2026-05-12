@@ -17,125 +17,6 @@
 </head>
 <body>
 
-  <!-- ===== PRELOADER ===== -->
-  <div class="preloader" id="preloader" aria-hidden="true">
-    <div class="preloader__scene">
-      <svg class="preloader__logo-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs>
-          <clipPath id="pl-cup-clip">
-            <path d="M 72,156 L 144,156 L 140,195 Q 108,202 76,195 Z"/>
-          </clipPath>
-        </defs>
-
-        <!-- ── Glass cup + saucer ── -->
-        <g class="pl-cup">
-          <!-- Saucer shadow -->
-          <ellipse cx="108" cy="206" rx="58" ry="7" fill="rgba(44,26,14,0.18)"/>
-          <!-- Saucer -->
-          <ellipse cx="108" cy="201" rx="63" ry="10" fill="#c8d8a8" stroke="#88b068" stroke-width="2.5"/>
-          <ellipse cx="108" cy="199" rx="48" ry="6.5" fill="#d8e8b8"/>
-          <!-- Cup body (glass, slightly tapered) -->
-          <path d="M 72,156 C 70,148 146,148 144,156 L 140,195 Q 108,202 76,195 Z"
-            fill="rgba(255,248,230,0.22)" stroke="#70b880" stroke-width="3"/>
-          <!-- Tea fill (amber) -->
-          <path d="M 76,175 L 140,175 L 140,195 Q 108,202 76,195 Z"
-            fill="#c07010" opacity="0.9" clip-path="url(#pl-cup-clip)"/>
-          <!-- Tea surface -->
-          <ellipse class="pl-tea-surface" cx="108" cy="175" rx="34" ry="7.5" fill="#d48820" opacity="0.95"/>
-          <!-- Cup rim ellipse -->
-          <ellipse cx="108" cy="156" rx="36" ry="9" fill="rgba(255,248,230,0.18)" stroke="#70b880" stroke-width="3"/>
-          <!-- Glass highlight left -->
-          <path d="M 78,176 C 78,165 85,158 87,164" stroke="rgba(255,255,255,0.78)" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-          <!-- Glass highlight bottom-left -->
-          <path d="M 82,188 L 82,182" stroke="rgba(255,255,255,0.55)" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- Handle -->
-          <path d="M 144,164 C 168,164 168,190 144,190" fill="none" stroke="#70b880" stroke-width="4" stroke-linecap="round"/>
-          <!-- Steam wisps -->
-          <path class="pl-steam" fill="none" stroke="rgba(255,253,248,0.6)" stroke-width="2.5" stroke-linecap="round"
-            d="M 96,149 C 93,138 100,130 97,119"/>
-          <path class="pl-steam pl-steam-b" fill="none" stroke="rgba(255,253,248,0.5)" stroke-width="2" stroke-linecap="round"
-            d="M 108,146 C 105,135 112,127 109,116"/>
-          <path class="pl-steam pl-steam-c" fill="none" stroke="rgba(255,253,248,0.5)" stroke-width="2" stroke-linecap="round"
-            d="M 120,149 C 117,138 124,130 121,119"/>
-        </g>
-
-        <!-- ── Kettle (drawn at origin; CSS translate+rotate to pour position) ── -->
-        <g class="pl-jar">
-          <!-- Body -->
-          <ellipse cx="0" cy="0" rx="44" ry="42" fill="#cce8a0"/>
-          <!-- Body depth shadow -->
-          <ellipse cx="-16" cy="4" rx="22" ry="28" fill="#88b050" opacity="0.32"/>
-          <!-- Orange wavy line upper -->
-          <path d="M -38,-8 C -28,-16 -16,-4 -6,-12 C 4,-20 16,-8 26,-14 C 34,-18 40,-10 42,-8"
-            fill="none" stroke="#e05020" stroke-width="4.5" stroke-linecap="round"/>
-          <!-- Dots upper -->
-          <circle cx="-25" cy="-3" r="4.5" fill="#e05020"/>
-          <circle cx="2"   cy="-3" r="4.5" fill="#e05020"/>
-          <circle cx="30"  cy="-5" r="4"   fill="#e05020"/>
-          <!-- Orange wavy line lower -->
-          <path d="M -38,12 C -28,4 -16,16 -6,8 C 4,0 16,12 26,6 C 34,2 40,10 42,12"
-            fill="none" stroke="#e05020" stroke-width="4.5" stroke-linecap="round"/>
-          <!-- Dots lower -->
-          <circle cx="-32" cy="20" r="4" fill="#e05020"/>
-          <circle cx="-8"  cy="20" r="4" fill="#e05020"/>
-          <circle cx="18"  cy="20" r="4" fill="#e05020"/>
-          <circle cx="40"  cy="14" r="4" fill="#e05020"/>
-          <!-- Brown band at lid base -->
-          <path d="M -44,-40 L 44,-40 L 42,-34 L -42,-34 Z" fill="#6b3a12"/>
-          <!-- Lid dome -->
-          <path d="M -42,-42 C -40,-90 40,-90 42,-42 Z" fill="#5a8030"/>
-          <!-- Lid highlight -->
-          <ellipse cx="-12" cy="-68" rx="11" ry="7" fill="rgba(255,255,255,0.30)" transform="rotate(-25,-12,-68)"/>
-          <!-- Knob -->
-          <circle cx="0" cy="-93" r="9" fill="#6b3a12"/>
-          <circle cx="-2" cy="-96" r="4" fill="rgba(255,245,200,0.65)"/>
-          <!-- Arch handle over top -->
-          <path d="M -20,-44 C -26,-125 26,-125 20,-44"
-            fill="none" stroke="#6b3a12" stroke-width="7.5" stroke-linecap="round"/>
-          <!-- Spout (LEFT — tea pours from here) -->
-          <path d="M -42,-12 C -60,-18 -74,-24 -80,-36"
-            fill="none" stroke="#5a8030" stroke-width="17" stroke-linecap="round"/>
-          <path d="M -42,-13 C -59,-19 -72,-25 -78,-36"
-            fill="none" stroke="#aad870" stroke-width="7" stroke-linecap="round"/>
-          <!-- Spout tip opening -->
-          <ellipse cx="-80" cy="-36" rx="9" ry="6.5" fill="#3a5e18" transform="rotate(-30,-80,-36)"/>
-          <!-- Handle (RIGHT) -->
-          <path d="M 42,-20 C 70,-20 70,20 42,20"
-            fill="none" stroke="#5a8030" stroke-width="13" stroke-linecap="round"/>
-          <path d="M 42,-18 C 65,-18 65,18 42,18"
-            fill="none" stroke="#c4ec98" stroke-width="5.5" stroke-linecap="round"/>
-          <!-- Body bottom rim -->
-          <ellipse cx="0" cy="42" rx="44" ry="8" fill="#9ac068" opacity="0.5"/>
-        </g>
-
-        <!-- ── Pouring stream (from kettle spout) ── -->
-        <!-- Main amber stream -->
-        <path class="pl-stream"
-          fill="none" stroke="#c07010" stroke-width="9" stroke-linecap="round"
-          d="M 90,91 C 92,118 108,140 115,155"/>
-        <!-- Lighter edge of stream (3-D rounded feel) -->
-        <path class="pl-stream"
-          fill="none" stroke="#e09828" stroke-width="4" stroke-linecap="round"
-          d="M 87,90 C 89,116 106,138 112,154"/>
-        <!-- Flowing shimmer dashes -->
-        <path class="pl-stream-flow"
-          fill="none" stroke="rgba(255,220,80,0.72)" stroke-width="3.5" stroke-linecap="round"
-          stroke-dasharray="10 8"
-          d="M 90,91 C 92,118 108,140 115,155"/>
-
-        <!-- ── Splash ring at cup entry ── -->
-        <ellipse class="pl-splash" cx="115" cy="158" rx="10" ry="5" fill="#d48820"/>
-
-        <!-- ── Tiny droplets ── -->
-        <circle class="pl-drop pl-drop-a" cx="107" cy="156" r="3.5" fill="#d48820"/>
-        <circle class="pl-drop pl-drop-b" cx="124" cy="158" r="3"   fill="#c87010"/>
-        <circle class="pl-drop pl-drop-c" cx="103" cy="162" r="2.5" fill="#d48820"/>
-      </svg>
-    </div>
-    <p class="preloader__tagline">Where Tradition Meets the Table</p>
-    <div class="preloader__bar" aria-hidden="true"></div>
-  </div>
-  <!-- ===== /PRELOADER ===== -->
 
   <!-- Page transition overlay -->
   <div class="page-overlay" aria-hidden="true"></div>
@@ -760,7 +641,7 @@
     </div>
   </footer>
 
-  <script src="js/preloader.js" defer></script>
+
   <script src="js/main.js" defer></script>
 </body>
 </html>
