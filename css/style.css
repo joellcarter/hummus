@@ -1196,8 +1196,8 @@ p:last-child { margin-bottom: 0; }
   align-items: start;
 }
 @media (min-width: 1024px) {
-  .menu-section__inner { grid-template-columns: 40% 60%; gap: var(--s-9); }
-  .menu-section__inner--reverse { grid-template-columns: 60% 40%; direction: rtl; }
+  .menu-section__inner { grid-template-columns: 2fr 3fr; gap: var(--s-9); }
+  .menu-section__inner--reverse { grid-template-columns: 3fr 2fr; direction: rtl; }
   .menu-section__inner--reverse > * { direction: ltr; }
 }
 
