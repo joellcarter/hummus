@@ -2134,7 +2134,7 @@ p:last-child { margin-bottom: 0; }
 .photo-strip__track {
   display: flex;
   gap: 6px;
-  animation: photo-marquee 40s linear infinite;
+  animation: photo-marquee 140s linear infinite;
   will-change: transform;
   flex-shrink: 0;
 }
